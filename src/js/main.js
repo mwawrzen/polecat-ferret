@@ -20,18 +20,33 @@ function navTo(curr) {
 
 // changing pages with scroll
 
+horizontal = true;
+
 window.addEventListener('wheel', e => {
 
-    if (e.deltaY < 0 && currentPage > 0 && currentPage <= pagesNumber) {
-        currentPage--;
-    }
+    if (horizontal) {
 
-    else if (e.deltaY > 0 && currentPage >= 0 && currentPage < pagesNumber) {
-        currentPage++;
-    }
+        if (e.deltaY < 0 && currentPage > 0 && currentPage <= pagesNumber) {
+            currentPage--;
+        }
 
-    navTo(currentPage);
+        else if (e.deltaY > 0 && currentPage >= 0 && currentPage < pagesNumber) {
+            currentPage++;
+        }
+
+        navTo(currentPage);
+    }
 });
+
+// changing scroll direction on specific subsite
+
+function readMore() {
+    horizontal = !horizontal;
+    if (!horizontal)
+        document.body.style.overflow = 'scroll';
+    else
+        document.body.style.overflow = 'hidden';
+}
 
 
 
@@ -50,6 +65,9 @@ contactButton.addEventListener('click', () => {
 contactOverlayButton.addEventListener('click', () => {
     contactOverlay.style.display = 'none';
 });
+
+/* switching theme mode */
+
 
 
 /* fixed bug connected with resizing the window */

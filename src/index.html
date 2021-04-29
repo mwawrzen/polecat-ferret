@@ -1,28 +1,122 @@
 <!DOCTYPE html>
 <html lang="pl">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>polecat-ferret</title>
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/modeSwitch.css">
+    <title>Zespół Szkół Łączności</title>
+    <link rel="stylesheet" href="./css/main.sass.min.css">
 </head>
-
 <body>
-
-    <h1>polecat-ferret</h1>
-
-    <label class="switch">
-        <input type="checkbox" onclick="mode()" />
-        <span class="slider"></span>
-    </label>
-
-    <script src="js/modeSwitch.js"></script>
-
+    <aside class="corner">
+        <div class="corner__logo">
+            <img
+                class="corner__logo-img"
+                src="./assets/img/logo-ciemne.png"
+                alt="logo"
+                onclick="navTo(0)"
+            >
+        </div>
+        <button type="button" class="corner__button">Kontakt</button>
+    </aside>
+    <button type="button" class="theme-button">dark/light</button>
+    <nav class="nav">
+        <ul class="nav__menu">
+            <li class="nav__item">
+                <button
+                    type="button"
+                    class="nav__link nav__link--active"
+                    onclick="navTo(0)"
+                ></button>
+            </li>
+            <li class="nav__item">
+                <button
+                    type="button"
+                    class="nav__link"
+                    onclick="navTo(1)"
+                ></button>
+            </li>
+            <li class="nav__item">
+                <button
+                    type="button"
+                    class="nav__link"
+                    onclick="navTo(2)"
+                ></button>
+            </li>
+            <li class="nav__item">
+                <button
+                    type="button"
+                    class="nav__link"
+                    onclick="navTo(3)"
+                ></button>
+            </li>
+        </ul>
+    </nav>
+    <section class="page" id="page-1">
+        <header class="page__title">Technik<br>informatyk</header>
+        <p class="page__subtitle">to jest kierunek w naszej szkole</p>
+        <button
+            type="button"
+            class="page__button btn-1"
+            onclick="readMore()"
+        >
+            Czytaj więcej...
+        </button>
+    </section>
+    <section class="page" id="page-2">
+        <header class="page__title">Technik<br>teleinformatyk</header>
+        <p class="page__subtitle">to jest kierunek w naszej szkole</p>
+        <button
+            type="button"
+            class="page__button btn-2"
+            onclick="readMore()"
+        >
+            Czytaj więcej...
+        </button>
+    </section>
+    <section class="page" id="page-3">
+        <header class="page__title">Technik<br>elektronik</header>
+        <p class="page__subtitle">to jest kierunek w naszej szkole</p>
+        <button
+            type="button"
+            class="page__button btn-3"
+            onclick="readMore()"
+        >
+            Czytaj więcej...
+        </button>
+    </section>
+    <section class="page" id="page-4">
+        <header class="page__title">Technik<br>programista</header>
+        <p class="page__subtitle">to jest kierunek w naszej szkole</p>
+        <button
+            type="button"
+            class="page__button btn-4"
+            onclick="readMore()"
+        >
+            Czytaj więcej...
+        </button>
+    </section>
+    <section class="contact-overlay">
+        <div class="contact-overlay__button"></div>
+        <h1 class="contact-overlay__title">Kontakt</h1>
+        <p class="contact-overlay__subtitle">Zapraszamy nwm</p>
+        <main class="contact-overlay__content">
+            <address class="contact-overlay__address">
+                Zespół Szkół Łączności <br>
+                ul. Monte Cassino 31 <br>
+                30-337 Kraków <br>
+                telefon: 12 269-15-57
+            </address>
+            <div class="contact-overlay__map">
+                <!-- placeholder -->
+                <img
+                    class="contact-overlay__map-img"
+                    src="./assets/img/mapka.PNG"
+                    alt="mapka"
+                >
+            </div>
+        </main>
+    </section>
+    <script src="./js/main.js"></script>
 </body>
-
 </html>

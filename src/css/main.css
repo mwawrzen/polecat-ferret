@@ -144,8 +144,8 @@ body {
   transition: 0.2s;
 }
 .contact-overlay__button:hover {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   cursor: pointer;
 }
 .contact-overlay__button::after, .contact-overlay__button::before {

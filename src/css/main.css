@@ -93,6 +93,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   text-align: center;
+  padding-top: 8rem;
   padding-bottom: 5rem;
   background: #fff;
 }

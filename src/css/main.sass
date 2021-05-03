@@ -19,6 +19,7 @@ body
 
 .corner
     position: fixed
+    z-index: 100
     top: 20px
     left: 20px
     padding: 5px
@@ -36,12 +37,14 @@ body
 
 .theme-button
     position: fixed
+    z-index: 100
     top: 20px
     right: 20px
     padding: 5px
 
 .nav
     position: fixed
+    z-index: 100
     bottom: 80px
     left: 50%
     transform: translateX(-50%)
@@ -66,15 +69,15 @@ body
 
 .page
     width: 100vw
-    height: 200vh
-    display: flex
-    flex-flow: column
-    align-items: center
-    justify-content: flex-start
-    text-align: center
-    padding-top: 8rem
-    padding-bottom: 5rem
-    background: #fff
+    position: relative
+
+    &__container
+        height: 100vh
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: center
+        text-align: center
 
     &__title
         font-size: 80px
@@ -88,12 +91,16 @@ body
         padding: 5px 10px
         margin-top: 5rem
 
-.content
-    display: flex
-    flex-flow: column
-    justify-content: space-between
-    height: 200vh
-    background: #ccc
+    &__content
+        border-radius: 20px 20px 0 0
+        padding: 2rem
+        background: #fff
+        position: absolute
+        top: 100vh
+        left: 15vw
+        width: 70vw
+        height: 80vh
+        overflow: scroll
 
 .contact-overlay
     width: 100vw
@@ -101,6 +108,7 @@ body
     background: rgba(20, 20, 20, .98)
     color: #eee
     position: fixed
+    z-index: 150
     top: 0
     left: 0
     display: flex
@@ -110,6 +118,7 @@ body
 
     &__button
         position: fixed
+        z-index: 200
         top: 30px
         left: 30px
         width: 50px

@@ -24,6 +24,7 @@ body {
 
 .corner {
   position: fixed;
+  z-index: 100;
   top: 20px;
   left: 20px;
   padding: 5px;
@@ -42,6 +43,7 @@ body {
 
 .theme-button {
   position: fixed;
+  z-index: 100;
   top: 20px;
   right: 20px;
   padding: 5px;
@@ -49,6 +51,7 @@ body {
 
 .nav {
   position: fixed;
+  z-index: 100;
   bottom: 80px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -79,7 +82,10 @@ body {
 
 .page {
   width: 100vw;
-  height: 200vh;
+  position: relative;
+}
+.page__container {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,13 +96,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  background: #fff;
 }
 .page__title {
   font-size: 80px;
@@ -110,20 +113,16 @@ body {
   padding: 5px 10px;
   margin-top: 5rem;
 }
-
-.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 200vh;
-  background: #ccc;
+.page__content {
+  border-radius: 20px 20px 0 0;
+  padding: 2rem;
+  background: #fff;
+  position: absolute;
+  top: 100vh;
+  left: 15vw;
+  width: 70vw;
+  height: 80vh;
+  overflow: scroll;
 }
 
 .contact-overlay {
@@ -132,6 +131,7 @@ body {
   background: rgba(20, 20, 20, 0.98);
   color: #eee;
   position: fixed;
+  z-index: 150;
   top: 0;
   left: 0;
   display: -webkit-box;
@@ -150,6 +150,7 @@ body {
 }
 .contact-overlay__button {
   position: fixed;
+  z-index: 200;
   top: 30px;
   left: 30px;
   width: 50px;

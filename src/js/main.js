@@ -1,10 +1,11 @@
 /* navigation */
 
-gsap.to(document.body, {duration: .3, left: 0});
+gsap.to(document.body, {duration: .3, top: 0, left: 0});
 
 const pagesNumber = 3; // first page -> 0
 let currentPage = 0;
 const navButtons = document.querySelectorAll('.nav__link');
+const pageContents = document.querySelectorAll('.page__content');
 
 function navTo(curr) {
 
@@ -13,6 +14,7 @@ function navTo(curr) {
 
     gsap.to(document.body, {
         duration: .8,
+        top: 0,
         left: -window.innerWidth * curr,
         ease: 'power4'
     });
@@ -47,10 +49,14 @@ function readMore() {
 
     horizontal = !horizontal;
 
-    if (!horizontal)
+    if (!horizontal) {
+        pageContents[currentPage].scrollTop = 0;
         document.body.style.overflow = 'scroll';
-    else
+        gsap.to(pageContents[currentPage], {duration: .4, top: '20vh'});
+    } else {
         document.body.style.overflow = 'hidden';
+        gsap.to(pageContents[currentPage], {duration: .4, top: '100vh'});
+    }
 }
 
 

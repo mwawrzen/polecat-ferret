@@ -1,16 +1,22 @@
 /* navigation */
 
-gsap.to(window, {duration: 1, scrollTo: {y: 0, x: 0}});
+gsap.to(window, {duration: .3, scrollTo: {y: 0, x: 0}});
+
 const pagesNumber = 3; // first page -> 0
 let currentPage = 0;
-const navButtons = [...document.querySelectorAll('.nav__link')];
+const navButtons = document.querySelectorAll('.nav__link');
 
 function navTo(curr) {
 
     if (curr > pagesNumber)
         console.error('Wrong current page number');
 
-    gsap.to(window, {duration: 1, scrollTo: {y: 0, x: window.innerWidth * curr}});
+    gsap.to(window, {
+        duration: .8,
+        scrollTo: {y: 0, x: window.innerWidth * curr},
+        ease: 'power4'
+    });
+
     currentPage = curr;
 
     navButtons.forEach(btn => btn.classList.remove('nav__link--active'));
@@ -38,7 +44,9 @@ window.addEventListener('wheel', e => {
 // changing scroll direction on specific subsite
 
 function readMore() {
+
     horizontal = !horizontal;
+
     if (!horizontal)
         document.body.style.overflow = 'scroll';
     else
@@ -69,5 +77,8 @@ contactOverlayButton.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
 
-    gsap.to(window, {duration: 1, scrollTo: {y: 0, x: window.innerWidth * currentPage}});
+    gsap.to(window, {
+        duration: .3,
+        scrollTo: {y: 0, x: window.innerWidth * currentPage}
+    });
 });

@@ -18,7 +18,7 @@ body {
   width: 400vw;
   font-family: sans-serif;
   overflow: hidden;
-  position: relative;
+  position: fixed;
 }
 
 .corner {

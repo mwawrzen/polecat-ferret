@@ -1,6 +1,6 @@
 /* navigation */
 
-gsap.to(window, {duration: .3, scrollTo: {y: 0, x: 0}});
+gsap.to(document.body, {duration: .3, left: 0});
 
 const pagesNumber = 3; // first page -> 0
 let currentPage = 0;
@@ -11,9 +11,9 @@ function navTo(curr) {
     if (curr > pagesNumber)
         console.error('Wrong current page number');
 
-    gsap.to(window, {
+    gsap.to(document.body, {
         duration: .8,
-        scrollTo: {y: 0, x: window.innerWidth * curr},
+        left: -window.innerWidth * curr,
         ease: 'power4'
     });
 
@@ -77,8 +77,8 @@ contactOverlayButton.addEventListener('click', () => {
 
 window.addEventListener('resize', () => {
 
-    gsap.to(window, {
+    gsap.to(document.body, {
         duration: .3,
-        scrollTo: {y: 0, x: window.innerWidth * currentPage}
+        left: -window.innerWidth * currentPage,
     });
 });

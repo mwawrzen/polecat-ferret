@@ -5,6 +5,7 @@
           box-sizing: border-box;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow: hidden;
 }
 *::-webkit-scrollbar {
   display: none;
@@ -18,7 +19,7 @@ body {
   width: 400vw;
   font-family: sans-serif;
   overflow: hidden;
-  position: relative;
+  position: fixed;
 }
 
 .corner {

@@ -111,6 +111,21 @@ body {
   margin-top: 5rem;
 }
 
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 200vh;
+  background: #ccc;
+}
+
 .contact-overlay {
   width: 100vw;
   height: 100vh;

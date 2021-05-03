@@ -1,17 +1,22 @@
 /* navigation */
 
-scrollTo({left: 0, top: 0, behavior: 'smooth'});
+gsap.to(window, {duration: .3, scrollTo: {y: 0, x: 0}});
 
 const pagesNumber = 3; // first page -> 0
 let currentPage = 0;
-const navButtons = [...document.querySelectorAll('.nav__link')];
+const navButtons = document.querySelectorAll('.nav__link');
 
 function navTo(curr) {
 
     if (curr > pagesNumber)
         console.error('Wrong current page number');
 
-    scrollTo({left: window.innerWidth * curr, behavior: 'smooth'});
+    gsap.to(window, {
+        duration: .8,
+        scrollTo: {y: 0, x: window.innerWidth * curr},
+        ease: 'power4'
+    });
+
     currentPage = curr;
 
     navButtons.forEach(btn => btn.classList.remove('nav__link--active'));
@@ -28,9 +33,7 @@ window.addEventListener('wheel', e => {
 
         if (e.deltaY < 0 && currentPage > 0 && currentPage <= pagesNumber) {
             currentPage--;
-        }
-
-        else if (e.deltaY > 0 && currentPage >= 0 && currentPage < pagesNumber) {
+        } else if (e.deltaY > 0 && currentPage >= 0 && currentPage < pagesNumber) {
             currentPage++;
         }
 
@@ -41,13 +44,14 @@ window.addEventListener('wheel', e => {
 // changing scroll direction on specific subsite
 
 function readMore() {
+
     horizontal = !horizontal;
+
     if (!horizontal)
         document.body.style.overflow = 'scroll';
     else
         document.body.style.overflow = 'hidden';
 }
-
 
 
 /* contact overlay */
@@ -69,11 +73,12 @@ contactOverlayButton.addEventListener('click', () => {
 /* switching theme mode */
 
 
-
 /* fixed bug connected with resizing the window */
 
 window.addEventListener('resize', () => {
-    scrollTo({
-        left: window.innerWidth * currentPage
+
+    gsap.to(window, {
+        duration: .3,
+        scrollTo: {y: 0, x: window.innerWidth * currentPage}
     });
 });

@@ -1,6 +1,6 @@
 /* navigation */
 
-gsap.to(document.body, {duration: .3, left: 0});
+gsap.to(document.body, {duration: .3, top: 0, left: 0});
 
 const pagesNumber = 3; // first page -> 0
 let currentPage = 0;
@@ -13,6 +13,7 @@ function navTo(curr) {
 
     gsap.to(document.body, {
         duration: .8,
+        top: 0,
         left: -window.innerWidth * curr,
         ease: 'power4'
     });
@@ -42,17 +43,50 @@ window.addEventListener('wheel', e => {
 });
 
 // changing scroll direction on specific subsite
+// animating change mode
+const pageContents = document.querySelectorAll('.page__content');
+const pageContainer = document.querySelectorAll('.page__container');
+const pageHeader = document.querySelectorAll('.page__title');
+const pageDescription = document.querySelectorAll('.page__subtitle');
+const pageReadMoreButton = document.querySelectorAll('.page__button');
+const pageCorner = document.querySelector('.corner');
+const pageCornerCloseButton = document.querySelector('.corner__close');
+
 
 function readMore() {
 
     horizontal = !horizontal;
+    let nav_menu = navButtons[0].parentElement.parentElement
 
-    if (!horizontal)
+    if (!horizontal) {
+        pageContents[currentPage].scrollTop = 0;
         document.body.style.overflow = 'scroll';
-    else
+        gsap.to(pageContents[currentPage], {duration: .4, top: '20vh'});
+        gsap.to(pageContainer[currentPage], {duration: .4, top: "15vh"});
+        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: "40px"});
+        gsap.to(pageDescription[currentPage], {duration: .4, opacity: 0});
+        gsap.to(pageReadMoreButton[currentPage], {duration: .4, opacity: 0});
+        gsap.to(nav_menu, {duration: .4, opacity: 0});
+        let tl = gsap.timeline();
+        tl.to(pageCorner, {duration: .4, top: "70px"});
+        tl.to(pageCornerCloseButton, {duration: .2, left: "0px"});
+    } else {
         document.body.style.overflow = 'hidden';
+        gsap.to(pageContents[currentPage], {duration: .4, top: '100vh'});
+        gsap.to(pageContainer[currentPage], {duration: .4, top: "50%"});
+        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: "80px"});
+        gsap.to(pageDescription[currentPage], {duration: .4, opacity: 1});
+        gsap.to(pageReadMoreButton[currentPage], {duration: .4, opacity: 1});
+        gsap.to(nav_menu, {duration: .4, opacity: 1});
+        let tl = gsap.timeline();
+        tl.to(pageCornerCloseButton, {duration: .2, left: "-70px"});
+        tl.to(pageCorner, {duration: .4, top: "20px"});
+    }
 }
 
+pageCornerCloseButton.addEventListener('click', () => {
+    readMore();
+});
 
 /* contact overlay */
 

@@ -42,8 +42,6 @@ window.addEventListener('wheel', e => {
     }
 });
 
-// changing scroll direction on specific subsite
-// animating change mode
 const pageContents = document.querySelectorAll('.page__content');
 const pageContainer = document.querySelectorAll('.page__container');
 const pageHeader = document.querySelectorAll('.page__title');
@@ -56,37 +54,42 @@ const pageCornerCloseButton = document.querySelector('.corner__close');
 function readMore() {
 
     horizontal = !horizontal;
-    let nav_menu = navButtons[0].parentElement.parentElement
+    let nav_menu = navButtons[0].parentElement.parentElement;
 
     if (!horizontal) {
+
         pageContents[currentPage].scrollTop = 0;
         document.body.style.overflow = 'scroll';
+
         gsap.to(pageContents[currentPage], {duration: .4, top: '20vh'});
-        gsap.to(pageContainer[currentPage], {duration: .4, top: "15vh"});
-        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: "40px"});
+        gsap.to(pageContainer[currentPage], {duration: .4, top: '150px'});
+        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: '40px'});
         gsap.to(pageDescription[currentPage], {duration: .4, opacity: 0});
         gsap.to(pageReadMoreButton[currentPage], {duration: .4, opacity: 0});
         gsap.to(nav_menu, {duration: .4, opacity: 0});
+
         let tl = gsap.timeline();
-        tl.to(pageCorner, {duration: .4, top: "70px"});
-        tl.to(pageCornerCloseButton, {duration: .2, left: "0px"});
+        tl.to(pageCorner, {duration: .4, top: '70px'});
+        tl.to(pageCornerCloseButton, {duration: .2, left: '0px'});
+
     } else {
+
         document.body.style.overflow = 'hidden';
+
         gsap.to(pageContents[currentPage], {duration: .4, top: '100vh'});
-        gsap.to(pageContainer[currentPage], {duration: .4, top: "50%"});
-        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: "80px"});
+        gsap.to(pageContainer[currentPage], {duration: .4, top: '50%'});
+        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: '80px'});
         gsap.to(pageDescription[currentPage], {duration: .4, opacity: 1});
         gsap.to(pageReadMoreButton[currentPage], {duration: .4, opacity: 1});
         gsap.to(nav_menu, {duration: .4, opacity: 1});
+
         let tl = gsap.timeline();
-        tl.to(pageCornerCloseButton, {duration: .2, left: "-70px"});
-        tl.to(pageCorner, {duration: .4, top: "20px"});
+        tl.to(pageCornerCloseButton, {duration: .2, left: '-70px'});
+        tl.to(pageCorner, {duration: .4, top: '20px'});
     }
 }
 
-pageCornerCloseButton.addEventListener('click', () => {
-    readMore();
-});
+pageCornerCloseButton.addEventListener('click', readMore);
 
 /* contact overlay */
 
@@ -113,6 +116,6 @@ window.addEventListener('resize', () => {
 
     gsap.to(document.body, {
         duration: .3,
-        left: -window.innerWidth * currentPage,
+        left: -window.innerWidth * currentPage
     });
 });

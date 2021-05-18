@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zespół Szkół Łączności</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.sass.min.css">
 </head>
 <body>
@@ -14,7 +17,6 @@
             class="corner__logo-img"
             src="./assets/img/logo-ciemne.png"
             alt="logo"
-            onclick="navTo(0)"
         >
     </div>
     <div class="corner__close"></div>
@@ -60,102 +62,73 @@
         <button
             type="button"
             class="page__button"
-            onclick="readMore()"
+            onclick="readMoreFunction()"
         >
             Czytaj więcej...
         </button>
     </div>
+    <aside class="page__navline-area">
+        <div class="page__navline">
+            <div
+                class="page__nl-circle page__nl-circle--1 page__nl-circle--active"
+                data-article="utk"
+            >
+                <p>Urządzenia<br>Techniki<br>Komputerowej</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--2"
+                data-article="sk"
+            >
+                <p>Sieci<br>Komputerowe</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--3"
+                data-article="sso"
+            >
+                <p>Sieciowe<br>Systemy<br>Operacyjne</p>
+            </div>
+        </div>
+    </aside>
     <main class="page__content">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id nobis totam suscipit, dicta, blanditiis iure, nemo ratione optio inventore tempore error in dignissimos consequuntur corrupti laudantium velit vero facere?
-        Nisi dolorem libero corporis impedit reiciendis officiis voluptates ipsa commodi asperiores sapiente laboriosam delectus ut, minima nostrum velit! Minima, ipsam deleniti cumque laborum dolore minus! Animi velit vel saepe fugiat!
-        Expedita inventore culpa, soluta minima unde maxime ut, deleniti dicta ipsam eaque vitae neque explicabo recusandae? Ex minus vitae neque cupiditate repellat? Optio quas fugit aperiam atque ut nesciunt libero!
-        Officiis aspernatur voluptate quia modi adipisci quidem explicabo laborum consequuntur laudantium cupiditate, obcaecati beatae unde vel quasi eum nemo deserunt? Eum neque labore quisquam nobis reiciendis magni illum quaerat nam!
-        Iste rerum nisi pariatur magni suscipit sint repellendus ad obcaecati, odio officiis exercitationem tempore quos impedit fugiat reprehenderit corrupti ut non tenetur tempora itaque dicta dolores soluta natus repellat. Alias!
-        Nobis ea pariatur omnis eveniet vitae! Minus illo ipsam veniam animi voluptatem, quis incidunt necessitatibus quas. Optio quo inventore eligendi neque provident numquam tempora quos id, debitis unde obcaecati praesentium!
-        Quidem, vero, laudantium tempore, reprehenderit velit quam nam expedita magni temporibus sunt omnis unde eaque est a nisi placeat. Debitis, aut. Quasi quos asperiores expedita necessitatibus quisquam et, natus nostrum.
-        Ratione ipsum libero aliquid blanditiis nisi nihil quam sed eveniet odio, quis vitae repudiandae quod totam obcaecati quos esse hic corrupti aperiam quaerat iste cumque possimus. Vel ipsa non excepturi!
-        Natus in maiores numquam. Velit aut porro, facere voluptate animi reiciendis placeat dolore ducimus natus, laudantium ipsam et sit nisi nostrum, id quis iusto dolorem deserunt minus impedit vitae cumque.
-        Reiciendis, possimus perferendis et unde quisquam delectus consectetur fuga tempore aperiam eius dicta enim reprehenderit saepe accusantium voluptatibus nihil illo totam libero laborum nisi quia doloremque? Perspiciatis eius ipsam eligendi?
-        Nulla possimus praesentium sed facilis eos ex reprehenderit ullam cupiditate, eligendi accusantium, ea officia totam eius quis. Soluta alias eius cupiditate ullam facilis, placeat dolores adipisci, ducimus odit aliquid ab.
-        Aut corrupti ipsa molestiae amet porro, consequuntur voluptates non perferendis quisquam natus nemo dicta est architecto, tempore nisi aliquam. Nobis assumenda, consectetur iure illo laboriosam reprehenderit corrupti ab ullam a?
-        Dolore neque autem eos est corrupti quaerat iusto ab ad doloremque ducimus consequatur quisquam a molestias, aliquid odio atque? Veritatis omnis similique perspiciatis voluptatibus dolorum assumenda voluptate blanditiis possimus dicta.
-        Iste, sed laudantium? Ipsam nobis vero in accusamus hic id quibusdam asperiores, maxime rem. Esse temporibus voluptatibus est impedit animi veniam quo dignissimos maiores vitae corrupti, voluptatum quia eum dolorem?
-        Eligendi neque impedit, voluptates sit vero labore! Harum, dolores, pariatur tempora qui tempore placeat assumenda blanditiis itaque voluptate ad deleniti enim laudantium. Facere reprehenderit atque sit assumenda nemo omnis illo?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id nobis totam suscipit, dicta, blanditiis iure, nemo ratione optio inventore tempore error in dignissimos consequuntur corrupti laudantium velit vero facere?
-        Nisi dolorem libero corporis impedit reiciendis officiis voluptates ipsa commodi asperiores sapiente laboriosam delectus ut, minima nostrum velit! Minima, ipsam deleniti cumque laborum dolore minus! Animi velit vel saepe fugiat!
-        Expedita inventore culpa, soluta minima unde maxime ut, deleniti dicta ipsam eaque vitae neque explicabo recusandae? Ex minus vitae neque cupiditate repellat? Optio quas fugit aperiam atque ut nesciunt libero!
-        Officiis aspernatur voluptate quia modi adipisci quidem explicabo laborum consequuntur laudantium cupiditate, obcaecati beatae unde vel quasi eum nemo deserunt? Eum neque labore quisquam nobis reiciendis magni illum quaerat nam!
-        Iste rerum nisi pariatur magni suscipit sint repellendus ad obcaecati, odio officiis exercitationem tempore quos impedit fugiat reprehenderit corrupti ut non tenetur tempora itaque dicta dolores soluta natus repellat. Alias!
-        Nobis ea pariatur omnis eveniet vitae! Minus illo ipsam veniam animi voluptatem, quis incidunt necessitatibus quas. Optio quo inventore eligendi neque provident numquam tempora quos id, debitis unde obcaecati praesentium!
-        Quidem, vero, laudantium tempore, reprehenderit velit quam nam expedita magni temporibus sunt omnis unde eaque est a nisi placeat. Debitis, aut. Quasi quos asperiores expedita necessitatibus quisquam et, natus nostrum.
-        Ratione ipsum libero aliquid blanditiis nisi nihil quam sed eveniet odio, quis vitae repudiandae quod totam obcaecati quos esse hic corrupti aperiam quaerat iste cumque possimus. Vel ipsa non excepturi!
-        Natus in maiores numquam. Velit aut porro, facere voluptate animi reiciendis placeat dolore ducimus natus, laudantium ipsam et sit nisi nostrum, id quis iusto dolorem deserunt minus impedit vitae cumque.
-        Reiciendis, possimus perferendis et unde quisquam delectus consectetur fuga tempore aperiam eius dicta enim reprehenderit saepe accusantium voluptatibus nihil illo totam libero laborum nisi quia doloremque? Perspiciatis eius ipsam eligendi?
-        Nulla possimus praesentium sed facilis eos ex reprehenderit ullam cupiditate, eligendi accusantium, ea officia totam eius quis. Soluta alias eius cupiditate ullam facilis, placeat dolores adipisci, ducimus odit aliquid ab.
-        Aut corrupti ipsa molestiae amet porro, consequuntur voluptates non perferendis quisquam natus nemo dicta est architecto, tempore nisi aliquam. Nobis assumenda, consectetur iure illo laboriosam reprehenderit corrupti ab ullam a?
-        Dolore neque autem eos est corrupti quaerat iusto ab ad doloremque ducimus consequatur quisquam a molestias, aliquid odio atque? Veritatis omnis similique perspiciatis voluptatibus dolorum assumenda voluptate blanditiis possimus dicta.
-        Iste, sed laudantium? Ipsam nobis vero in accusamus hic id quibusdam asperiores, maxime rem. Esse temporibus voluptatibus est impedit animi veniam quo dignissimos maiores vitae corrupti, voluptatum quia eum dolorem?
-        Eligendi neque impedit, voluptates sit vero labore! Harum, dolores, pariatur tempora qui tempore placeat assumenda blanditiis itaque voluptate ad deleniti enim laudantium. Facere reprehenderit atque sit assumenda nemo omnis illo?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id nobis totam suscipit, dicta, blanditiis iure, nemo ratione optio inventore tempore error in dignissimos consequuntur corrupti laudantium velit vero facere?
-        Nisi dolorem libero corporis impedit reiciendis officiis voluptates ipsa commodi asperiores sapiente laboriosam delectus ut, minima nostrum velit! Minima, ipsam deleniti cumque laborum dolore minus! Animi velit vel saepe fugiat!
-        Expedita inventore culpa, soluta minima unde maxime ut, deleniti dicta ipsam eaque vitae neque explicabo recusandae? Ex minus vitae neque cupiditate repellat? Optio quas fugit aperiam atque ut nesciunt libero!
-        Officiis aspernatur voluptate quia modi adipisci quidem explicabo laborum consequuntur laudantium cupiditate, obcaecati beatae unde vel quasi eum nemo deserunt? Eum neque labore quisquam nobis reiciendis magni illum quaerat nam!
-        Iste rerum nisi pariatur magni suscipit sint repellendus ad obcaecati, odio officiis exercitationem tempore quos impedit fugiat reprehenderit corrupti ut non tenetur tempora itaque dicta dolores soluta natus repellat. Alias!
-        Nobis ea pariatur omnis eveniet vitae! Minus illo ipsam veniam animi voluptatem, quis incidunt necessitatibus quas. Optio quo inventore eligendi neque provident numquam tempora quos id, debitis unde obcaecati praesentium!
-        Quidem, vero, laudantium tempore, reprehenderit velit quam nam expedita magni temporibus sunt omnis unde eaque est a nisi placeat. Debitis, aut. Quasi quos asperiores expedita necessitatibus quisquam et, natus nostrum.
-        Ratione ipsum libero aliquid blanditiis nisi nihil quam sed eveniet odio, quis vitae repudiandae quod totam obcaecati quos esse hic corrupti aperiam quaerat iste cumque possimus. Vel ipsa non excepturi!
-        Natus in maiores numquam. Velit aut porro, facere voluptate animi reiciendis placeat dolore ducimus natus, laudantium ipsam et sit nisi nostrum, id quis iusto dolorem deserunt minus impedit vitae cumque.
-        Reiciendis, possimus perferendis et unde quisquam delectus consectetur fuga tempore aperiam eius dicta enim reprehenderit saepe accusantium voluptatibus nihil illo totam libero laborum nisi quia doloremque? Perspiciatis eius ipsam eligendi?
-        Nulla possimus praesentium sed facilis eos ex reprehenderit ullam cupiditate, eligendi accusantium, ea officia totam eius quis. Soluta alias eius cupiditate ullam facilis, placeat dolores adipisci, ducimus odit aliquid ab.
-        Aut corrupti ipsa molestiae amet porro, consequuntur voluptates non perferendis quisquam natus nemo dicta est architecto, tempore nisi aliquam. Nobis assumenda, consectetur iure illo laboriosam reprehenderit corrupti ab ullam a?
-        Dolore neque autem eos est corrupti quaerat iusto ab ad doloremque ducimus consequatur quisquam a molestias, aliquid odio atque? Veritatis omnis similique perspiciatis voluptatibus dolorum assumenda voluptate blanditiis possimus dicta.
-        Iste, sed laudantium? Ipsam nobis vero in accusamus hic id quibusdam asperiores, maxime rem. Esse temporibus voluptatibus est impedit animi veniam quo dignissimos maiores vitae corrupti, voluptatum quia eum dolorem?
-        Eligendi neque impedit, voluptates sit vero labore! Harum, dolores, pariatur tempora qui tempore placeat assumenda blanditiis itaque voluptate ad deleniti enim laudantium. Facere reprehenderit atque sit assumenda nemo omnis illo?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id nobis totam suscipit, dicta, blanditiis iure, nemo ratione optio inventore tempore error in dignissimos consequuntur corrupti laudantium velit vero facere?
-        Nisi dolorem libero corporis impedit reiciendis officiis voluptates ipsa commodi asperiores sapiente laboriosam delectus ut, minima nostrum velit! Minima, ipsam deleniti cumque laborum dolore minus! Animi velit vel saepe fugiat!
-        Expedita inventore culpa, soluta minima unde maxime ut, deleniti dicta ipsam eaque vitae neque explicabo recusandae? Ex minus vitae neque cupiditate repellat? Optio quas fugit aperiam atque ut nesciunt libero!
-        Officiis aspernatur voluptate quia modi adipisci quidem explicabo laborum consequuntur laudantium cupiditate, obcaecati beatae unde vel quasi eum nemo deserunt? Eum neque labore quisquam nobis reiciendis magni illum quaerat nam!
-        Iste rerum nisi pariatur magni suscipit sint repellendus ad obcaecati, odio officiis exercitationem tempore quos impedit fugiat reprehenderit corrupti ut non tenetur tempora itaque dicta dolores soluta natus repellat. Alias!
-        Nobis ea pariatur omnis eveniet vitae! Minus illo ipsam veniam animi voluptatem, quis incidunt necessitatibus quas. Optio quo inventore eligendi neque provident numquam tempora quos id, debitis unde obcaecati praesentium!
-        Quidem, vero, laudantium tempore, reprehenderit velit quam nam expedita magni temporibus sunt omnis unde eaque est a nisi placeat. Debitis, aut. Quasi quos asperiores expedita necessitatibus quisquam et, natus nostrum.
-        Ratione ipsum libero aliquid blanditiis nisi nihil quam sed eveniet odio, quis vitae repudiandae quod totam obcaecati quos esse hic corrupti aperiam quaerat iste cumque possimus. Vel ipsa non excepturi!
-        Natus in maiores numquam. Velit aut porro, facere voluptate animi reiciendis placeat dolore ducimus natus, laudantium ipsam et sit nisi nostrum, id quis iusto dolorem deserunt minus impedit vitae cumque.
-        Reiciendis, possimus perferendis et unde quisquam delectus consectetur fuga tempore aperiam eius dicta enim reprehenderit saepe accusantium voluptatibus nihil illo totam libero laborum nisi quia doloremque? Perspiciatis eius ipsam eligendi?
-        Nulla possimus praesentium sed facilis eos ex reprehenderit ullam cupiditate, eligendi accusantium, ea officia totam eius quis. Soluta alias eius cupiditate ullam facilis, placeat dolores adipisci, ducimus odit aliquid ab.
-        Aut corrupti ipsa molestiae amet porro, consequuntur voluptates non perferendis quisquam natus nemo dicta est architecto, tempore nisi aliquam. Nobis assumenda, consectetur iure illo laboriosam reprehenderit corrupti ab ullam a?
-        Dolore neque autem eos est corrupti quaerat iusto ab ad doloremque ducimus consequatur quisquam a molestias, aliquid odio atque? Veritatis omnis similique perspiciatis voluptatibus dolorum assumenda voluptate blanditiis possimus dicta.
-        Iste, sed laudantium? Ipsam nobis vero in accusamus hic id quibusdam asperiores, maxime rem. Esse temporibus voluptatibus est impedit animi veniam quo dignissimos maiores vitae corrupti, voluptatum quia eum dolorem?
-        Eligendi neque impedit, voluptates sit vero labore! Harum, dolores, pariatur tempora qui tempore placeat assumenda blanditiis itaque voluptate ad deleniti enim laudantium. Facere reprehenderit atque sit assumenda nemo omnis illo?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id nobis totam suscipit, dicta, blanditiis iure, nemo ratione optio inventore tempore error in dignissimos consequuntur corrupti laudantium velit vero facere?
-        Nisi dolorem libero corporis impedit reiciendis officiis voluptates ipsa commodi asperiores sapiente laboriosam delectus ut, minima nostrum velit! Minima, ipsam deleniti cumque laborum dolore minus! Animi velit vel saepe fugiat!
-        Expedita inventore culpa, soluta minima unde maxime ut, deleniti dicta ipsam eaque vitae neque explicabo recusandae? Ex minus vitae neque cupiditate repellat? Optio quas fugit aperiam atque ut nesciunt libero!
-        Officiis aspernatur voluptate quia modi adipisci quidem explicabo laborum consequuntur laudantium cupiditate, obcaecati beatae unde vel quasi eum nemo deserunt? Eum neque labore quisquam nobis reiciendis magni illum quaerat nam!
-        Iste rerum nisi pariatur magni suscipit sint repellendus ad obcaecati, odio officiis exercitationem tempore quos impedit fugiat reprehenderit corrupti ut non tenetur tempora itaque dicta dolores soluta natus repellat. Alias!
-        Nobis ea pariatur omnis eveniet vitae! Minus illo ipsam veniam animi voluptatem, quis incidunt necessitatibus quas. Optio quo inventore eligendi neque provident numquam tempora quos id, debitis unde obcaecati praesentium!
-        Quidem, vero, laudantium tempore, reprehenderit velit quam nam expedita magni temporibus sunt omnis unde eaque est a nisi placeat. Debitis, aut. Quasi quos asperiores expedita necessitatibus quisquam et, natus nostrum.
-        Ratione ipsum libero aliquid blanditiis nisi nihil quam sed eveniet odio, quis vitae repudiandae quod totam obcaecati quos esse hic corrupti aperiam quaerat iste cumque possimus. Vel ipsa non excepturi!
-        Natus in maiores numquam. Velit aut porro, facere voluptate animi reiciendis placeat dolore ducimus natus, laudantium ipsam et sit nisi nostrum, id quis iusto dolorem deserunt minus impedit vitae cumque.
-        Reiciendis, possimus perferendis et unde quisquam delectus consectetur fuga tempore aperiam eius dicta enim reprehenderit saepe accusantium voluptatibus nihil illo totam libero laborum nisi quia doloremque? Perspiciatis eius ipsam eligendi?
-        Nulla possimus praesentium sed facilis eos ex reprehenderit ullam cupiditate, eligendi accusantium, ea officia totam eius quis. Soluta alias eius cupiditate ullam facilis, placeat dolores adipisci, ducimus odit aliquid ab.
-        Aut corrupti ipsa molestiae amet porro, consequuntur voluptates non perferendis quisquam natus nemo dicta est architecto, tempore nisi aliquam. Nobis assumenda, consectetur iure illo laboriosam reprehenderit corrupti ab ullam a?
-        Dolore neque autem eos est corrupti quaerat iusto ab ad doloremque ducimus consequatur quisquam a molestias, aliquid odio atque? Veritatis omnis similique perspiciatis voluptatibus dolorum assumenda voluptate blanditiis possimus dicta.
-        Iste, sed laudantium? Ipsam nobis vero in accusamus hic id quibusdam asperiores, maxime rem. Esse temporibus voluptatibus est impedit animi veniam quo dignissimos maiores vitae corrupti, voluptatum quia eum dolorem?
-        Eligendi neque impedit, voluptates sit vero labore! Harum, dolores, pariatur tempora qui tempore placeat assumenda blanditiis itaque voluptate ad deleniti enim laudantium. Facere reprehenderit atque sit assumenda nemo omnis illo?
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur id nobis totam suscipit, dicta, blanditiis iure, nemo ratione optio inventore tempore error in dignissimos consequuntur corrupti laudantium velit vero facere?
-        Nisi dolorem libero corporis impedit reiciendis officiis voluptates ipsa commodi asperiores sapiente laboriosam delectus ut, minima nostrum velit! Minima, ipsam deleniti cumque laborum dolore minus! Animi velit vel saepe fugiat!
-        Expedita inventore culpa, soluta minima unde maxime ut, deleniti dicta ipsam eaque vitae neque explicabo recusandae? Ex minus vitae neque cupiditate repellat? Optio quas fugit aperiam atque ut nesciunt libero!
-        Officiis aspernatur voluptate quia modi adipisci quidem explicabo laborum consequuntur laudantium cupiditate, obcaecati beatae unde vel quasi eum nemo deserunt? Eum neque labore quisquam nobis reiciendis magni illum quaerat nam!
-        Iste rerum nisi pariatur magni suscipit sint repellendus ad obcaecati, odio officiis exercitationem tempore quos impedit fugiat reprehenderit corrupti ut non tenetur tempora itaque dicta dolores soluta natus repellat. Alias!
-        Nobis ea pariatur omnis eveniet vitae! Minus illo ipsam veniam animi voluptatem, quis incidunt necessitatibus quas. Optio quo inventore eligendi neque provident numquam tempora quos id, debitis unde obcaecati praesentium!
-        Quidem, vero, laudantium tempore, reprehenderit velit quam nam expedita magni temporibus sunt omnis unde eaque est a nisi placeat. Debitis, aut. Quasi quos asperiores expedita necessitatibus quisquam et, natus nostrum.
-        Ratione ipsum libero aliquid blanditiis nisi nihil quam sed eveniet odio, quis vitae repudiandae quod totam obcaecati quos esse hic corrupti aperiam quaerat iste cumque possimus. Vel ipsa non excepturi!
-        Natus in maiores numquam. Velit aut porro, facere voluptate animi reiciendis placeat dolore ducimus natus, laudantium ipsam et sit nisi nostrum, id quis iusto dolorem deserunt minus impedit vitae cumque.
-        Reiciendis, possimus perferendis et unde quisquam delectus consectetur fuga tempore aperiam eius dicta enim reprehenderit saepe accusantium voluptatibus nihil illo totam libero laborum nisi quia doloremque? Perspiciatis eius ipsam eligendi?
-        Nulla possimus praesentium sed facilis eos ex reprehenderit ullam cupiditate, eligendi accusantium, ea officia totam eius quis. Soluta alias eius cupiditate ullam facilis, placeat dolores adipisci, ducimus odit aliquid ab.
-        Aut corrupti ipsa molestiae amet porro, consequuntur voluptates non perferendis quisquam natus nemo dicta est architecto, tempore nisi aliquam. Nobis assumenda, consectetur iure illo laboriosam reprehenderit corrupti ab ullam a?
-        Dolore neque autem eos est corrupti quaerat iusto ab ad doloremque ducimus consequatur quisquam a molestias, aliquid odio atque? Veritatis omnis similique perspiciatis voluptatibus dolorum assumenda voluptate blanditiis possimus dicta.
-        Iste, sed laudantium? Ipsam nobis vero in accusamus hic id quibusdam asperiores, maxime rem. Esse temporibus voluptatibus est impedit animi veniam quo dignissimos maiores vitae corrupti, voluptatum quia eum dolorem?
-        Eligendi neque impedit, voluptates sit vero labore! Harum, dolores, pariatur tempora qui tempore placeat assumenda blanditiis itaque voluptate ad deleniti enim laudantium. Facere reprehenderit atque sit assumenda nemo omnis illo?</p>
+        <article class="page__article utk">
+            <h1>Urządzenia Techniki Komputerowej</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sk">
+            <h1>Sieci Komputerowe</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sso">
+            <h1>Sieciowe Systemy Operacyjne</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
     </main>
 </section>
 <section class="page">
@@ -165,13 +138,73 @@
         <button
             type="button"
             class="page__button"
-            onclick="readMore()"
+            onclick="readMoreFunction()"
         >
             Czytaj więcej...
         </button>
     </div>
+    <aside class="page__navline-area">
+        <div class="page__navline">
+            <div
+                class="page__nl-circle page__nl-circle--1 page__nl-circle--active"
+                data-article="utk"
+            >
+                <p>Urządzenia<br>Techniki<br>Komputerowej</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--2"
+                data-article="sk"
+            >
+                <p>Sieci<br>Komputerowe</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--3"
+                data-article="sso"
+            >
+                <p>Sieciowe<br>Systemy<br>Operacyjne</p>
+            </div>
+        </div>
+    </aside>
     <main class="page__content">
-        <p>Facere reprehenderit atque sit assumenda nemo omnis illo?</p>
+        <article class="page__article utk">
+            <h1>Urządzenia Techniki Komputerowej</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sk">
+            <h1>Sieci Komputerowe</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sso">
+            <h1>Sieciowe Systemy Operacyjne</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
     </main>
 </section>
 <section class="page">
@@ -181,13 +214,73 @@
         <button
             type="button"
             class="page__button"
-            onclick="readMore()"
+            onclick="readMoreFunction()"
         >
             Czytaj więcej...
         </button>
     </div>
+    <aside class="page__navline-area">
+        <div class="page__navline">
+            <div
+                class="page__nl-circle page__nl-circle--1 page__nl-circle--active"
+                data-article="utk"
+            >
+                <p>Urządzenia<br>Techniki<br>Komputerowej</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--2"
+                data-article="sk"
+            >
+                <p>Sieci<br>Komputerowe</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--3"
+                data-article="sso"
+            >
+                <p>Sieciowe<br>Systemy<br>Operacyjne</p>
+            </div>
+        </div>
+    </aside>
     <main class="page__content">
-        <p>Facere reprehenderit atque sit assumenda nemo omnis illo?</p>
+        <article class="page__article utk">
+            <h1>Urządzenia Techniki Komputerowej</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sk">
+            <h1>Sieci Komputerowe</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sso">
+            <h1>Sieciowe Systemy Operacyjne</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
     </main>
 </section>
 <section class="page">
@@ -197,13 +290,73 @@
         <button
             type="button"
             class="page__button"
-            onclick="readMore()"
+            onclick="readMoreFunction()"
         >
             Czytaj więcej...
         </button>
     </div>
+    <aside class="page__navline-area">
+        <div class="page__navline">
+            <div
+                class="page__nl-circle page__nl-circle--1 page__nl-circle--active"
+                data-article="utk"
+            >
+                <p>Urządzenia<br>Techniki<br>Komputerowej</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--2"
+                data-article="sk"
+            >
+                <p>Sieci<br>Komputerowe</p>
+            </div>
+            <div
+                class="page__nl-circle page__nl-circle--3"
+                data-article="sso"
+            >
+                <p>Sieciowe<br>Systemy<br>Operacyjne</p>
+            </div>
+        </div>
+    </aside>
     <main class="page__content">
-        <p>Facere reprehenderit atque sit assumenda nemo omnis illo?</p>
+        <article class="page__article utk">
+            <h1>Urządzenia Techniki Komputerowej</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sk">
+            <h1>Sieci Komputerowe</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
+        <article class="page__article sso">
+            <h1>Sieciowe Systemy Operacyjne</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil, iusto modi nostrum exercitationem aliquid neque similique sit in, labore dignissimos sunt, eos est nam. Nemo aliquam perspiciatis dolores debitis?
+            Assumenda adipisci quibusdam alias ab facere. Officia sint debitis, eligendi nam necessitatibus excepturi aspernatur nisi dolores, minus illum nesciunt facilis reiciendis ab et animi aperiam, temporibus dolorem delectus maxime ex!
+            Similique, officia placeat doloremque atque, voluptatem dignissimos, hic alias dicta nisi vero consectetur est officiis et laudantium? Sunt, suscipit aut, vitae incidunt labore, repellendus laborum cum voluptates voluptatum quibusdam fuga.
+            Perferendis beatae tenetur, aliquid obcaecati odio odit commodi dolores reprehenderit optio recusandae modi excepturi perspiciatis omnis et rerum ipsum consectetur quo dignissimos tempore maiores repudiandae cum, quaerat molestiae. Nobis, saepe?
+            Unde sunt provident odio incidunt, cupiditate, earum architecto tempore a omnis beatae voluptate corrupti quas magnam explicabo iste tempora officia. Deserunt aperiam magni voluptatum. Ipsam maxime minus facilis modi neque?
+            Animi sapiente ipsa a accusantium itaque sunt quos natus debitis tempora illum repellendus ullam, impedit in magnam laborum. Repudiandae unde labore neque voluptate. Veritatis numquam sint repellat vitae laudantium et.
+            Fugit animi est sunt fugiat modi minus optio totam reiciendis iusto nostrum ipsam harum esse expedita eveniet omnis illum beatae iure cumque cum, voluptate ex! Odio officiis sunt veritatis ex!
+            Dignissimos, numquam odit sit quasi quae esse corrupti repudiandae est ipsum quidem cumque blanditiis optio vel sunt eum tempore molestias ad commodi voluptatum ipsa amet, quaerat ipsam consequuntur nisi. A?
+            Quos ea sunt est libero molestiae placeat eos, repudiandae atque soluta cumque deserunt fuga laudantium fugit, ipsum similique hic voluptates mollitia illo itaque obcaecati saepe! Expedita mollitia id molestias nesciunt.
+            Quod nobis repellendus aut, magni eos rem cumque, eaque animi velit suscipit soluta maiores vero unde illo, modi doloremque laudantium perferendis? Voluptates dolore fugit fugiat tempora obcaecati aliquid aspernatur nam.</p>
+        </article>
     </main>
 </section>
 <section class="contact-overlay">
@@ -230,5 +383,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/resize-bug.js"></script>
 </body>
 </html>

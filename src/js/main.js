@@ -79,6 +79,7 @@ const pageContents = document.querySelectorAll('.page__content');
 
 const readMoreFunction = () => {
 
+    initNavlineService();
     horizontal = !horizontal;
     const c = currentPage;
 
@@ -149,3 +150,59 @@ contactOverlayButton.addEventListener('click', () => {
     horizontal = temp;
     contactOverlay.style.display = 'none';
 });
+
+
+/* navline service */
+
+
+
+const initNavlineService = () => {
+
+    const circles = document.querySelectorAll('.page__nl-circle');
+
+    let activeArticle = [
+        ...document.querySelectorAll('.page__navline')[currentPage].children
+    ][0];
+
+    const addActiveClass = target => {
+
+        circles.forEach(item => item.classList.remove('page__nl-circle--active'));
+        target.classList.add('page__nl-circle--active');
+    }
+
+    addActiveClass(activeArticle);
+
+    circles.forEach(item => item.addEventListener('click', e => {
+
+        const paragraphs = document.querySelectorAll(`.${e.target.dataset.article}`);
+
+        pageContents[currentPage].scrollTo({
+            top: paragraphs[currentPage].offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+
+        addActiveClass(e.target);
+    }));
+
+    pageContents[currentPage].addEventListener('wheel', e => {
+
+        const circles = [
+            ...document.querySelectorAll('.page__navline')[currentPage].children
+        ];
+
+        circles.forEach(circle => {
+
+            const paragraph = document
+                .querySelectorAll(`.${circle.dataset.article}`)[currentPage];
+
+            if (
+                pageContents[currentPage].clientHeight / 2 + pageContents[currentPage].scrollTop >
+                paragraph.offsetTop
+            )
+                activeArticle = circle;
+        });
+
+        addActiveClass(activeArticle);
+    });
+}

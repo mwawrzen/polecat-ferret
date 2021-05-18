@@ -1,30 +1,41 @@
+/* gsap service */
+
+const anim = (elem, options, duration = .4) => {
+    gsap.to(elem, { duration, ease: 'power3', ...options});
+}
+
+const tlAnim = (tl, elem, options, duration = .4, others = null) => {
+    tl.to(elem, { duration, ease: 'power3', ...options }, others);
+}
+
 /* navigation */
 
-gsap.to(document.body, {duration: .3, top: 0, left: 0});
+gsap.to(document.body, { duration: .3, top: 0, left: 0 });
 
 const pagesNumber = 3; // first page -> 0
 let currentPage = 0;
 const navButtons = document.querySelectorAll('.nav__link');
 
-function navTo(curr) {
+const navTo = currPage => {
 
-    if (curr > pagesNumber)
+    if (currPage > pagesNumber)
         console.error('Wrong current page number');
 
     gsap.to(document.body, {
         duration: .8,
         top: 0,
-        left: -window.innerWidth * curr,
+        left: -window.innerWidth * currPage,
         ease: 'power4'
     });
 
-    currentPage = curr;
+    currentPage = currPage;
 
     navButtons.forEach(btn => btn.classList.remove('nav__link--active'));
-    navButtons[curr].classList.add('nav__link--active');
+    navButtons[currPage].classList.add('nav__link--active');
 }
 
-// changing pages with scroll
+
+/* changing pages with scroll */
 
 horizontal = true;
 
@@ -32,158 +43,112 @@ window.addEventListener('wheel', e => {
 
     if (horizontal) {
 
-        if (e.deltaY < 0 && currentPage > 0 && currentPage <= pagesNumber) {
+        if (
+            e.deltaY < 0 &&
+            currentPage > 0 &&
+            currentPage <= pagesNumber
+        )
             currentPage--;
-        } else if (e.deltaY > 0 && currentPage >= 0 && currentPage < pagesNumber) {
+
+        else if (
+            e.deltaY > 0 &&
+            currentPage >= 0 &&
+            currentPage < pagesNumber
+        )
             currentPage++;
-        }
 
         navTo(currentPage);
     }
 });
 
-const pageContents = document.querySelectorAll('.page__content');
-const pageNavlines = document.querySelectorAll('.page__navline-area');
-const pageContainer = document.querySelectorAll('.page__container');
+
+/* readmore function */
+
+const pageCorner = document.querySelector('.corner');
+const pageCornerCloseButton = document.querySelector('.corner__close');
+const logo = document.querySelector('.corner__logo');
+const contactButton = document.querySelector('.corner__button');
+const navMenu = document.querySelector('.nav__menu');
+
 const pageHeader = document.querySelectorAll('.page__title');
 const pageDescription = document.querySelectorAll('.page__subtitle');
 const pageReadMoreButton = document.querySelectorAll('.page__button');
-const pageCorner = document.querySelector('.corner');
-const pageCornerCloseButton = document.querySelector('.corner__close');
-const navMenu = navButtons[0].parentElement.parentElement;
+const pageContainer = document.querySelectorAll('.page__container');
+const pageNavlines = document.querySelectorAll('.page__navline-area');
+const pageContents = document.querySelectorAll('.page__content');
 
-
-function readMore() {
+const readMoreFunction = () => {
 
     horizontal = !horizontal;
+    const c = currentPage;
 
-    if (!horizontal) {
+    if (!horizontal && horizontal !== null) {
 
-        pageContents[currentPage].scrollTop = 0;
+        pageContents[c].scrollTop = 0;
         document.body.style.overflow = 'scroll';
 
-        gsap.to(pageContents[currentPage], {
-            duration: .4,
-            top: '20vh'
-        });
-        gsap.to(pageContainer[currentPage], {
-            duration: .4,
-            top: '150px'
-        });
-        gsap.to(pageHeader[currentPage], {
-            duration: .4,
-            fontSize: '40px'
-        });
-        gsap.to(pageDescription[currentPage], {
-            duration: .4,
-            opacity: 0
-        });
-        gsap.to(pageReadMoreButton[currentPage], {
-            duration: .4,
-            opacity: 0
-        });
-        gsap.to(navMenu, {
-            duration: .4,
-            opacity: 0
-        });
+        anim(pageContents[c], { top: '20vh' });
+        anim(pageContainer[c], { top: '150px' });
+        anim(pageHeader[c], { fontSize: '40px' });
+        anim(pageDescription[c], { opacity: 0 });
+        anim(pageReadMoreButton[c], { opacity: 0 });
+        anim(navMenu, { opacity: 0 });
 
         let tl = gsap.timeline();
 
-        tl.to(pageCorner, {
-            duration: .4,
-            top: '70px'
-        });
-        tl.to(pageCornerCloseButton, {
-            duration: .2, left: '3px'});
-        tl.to(pageNavlines[currentPage], {
-            duration: .8,
-            bottom: '0',
-            ease: 'power3'
-        },1.5);
-        tl.to(document.querySelector('.corner__logo'), {
-            duration: .4,
-            width: '50px'
-        }, 1);
-
-        tl.to(document.querySelector('.corner__button'), {
-            duration: .4,
+        tlAnim(tl, pageCorner, { top: '70px' }, .4);
+        tlAnim(tl, pageCornerCloseButton, { left: '3px' }, .2);
+        tlAnim(tl, pageNavlines, { bottom: '0' }, .8, 1.5);
+        tlAnim(tl, logo, { width: '50px' }, .4, 1);
+        tlAnim(tl, contactButton, {
             transform: 'rotate(-90deg) translate(-50%, -50%)'
-        }, 1);
+        }, .4, 1);
 
     } else {
 
         document.body.style.overflow = 'hidden';
 
-        gsap.to(pageContents[currentPage], {
-            duration: .4,
-            top: '100vh'
-        });
-        gsap.to(pageContainer[currentPage], {
-            duration: .4,
-            top: '50%'
-        });
-        gsap.to(pageHeader[currentPage], {
-            duration: .4,
-            fontSize: '80px'
-        });
-        gsap.to(pageDescription[currentPage], {
-            duration: .4,
-            opacity: 1
-        });
-        gsap.to(pageReadMoreButton[currentPage], {
-            duration: .4,
-            opacity: 1
-        });
-        gsap.to(navMenu, {
-            duration: .4,
-            opacity: 1
-        });
+        anim(pageContents[c], { top: '100vh' });
+        anim(pageContainer[c], { top: '50%' });
+        anim(pageHeader[c], { fontSize: '80px' });
+        anim(pageDescription[c], { opacity: 1 });
+        anim(pageReadMoreButton[c], { opacity: 1 });
+        anim(navMenu, { opacity: 1 });
 
         let tl = gsap.timeline();
 
-        tl.to(pageCornerCloseButton, {
-            duration: .2,
-            left: '-70px'
-        });
-        tl.to(pageCorner, {
-            duration: .4,
-            top: '20px'
-        });
-        tl.to(pageNavlines[currentPage], {
-            duration: .8,
-            bottom: '100vh',
-            ease: 'power3'
-        }, 1);
-        tl.to(document.querySelector('.corner__logo'), {
-            duration: .4,
-            width: '100px'
-        }, 1.2);
-        tl.to(document.querySelector('.corner__button'), {
-            duration: .4,
+        tlAnim(tl, pageCornerCloseButton, { left: '-70px' }, .2);
+        tlAnim(tl, pageCorner, { top: '20px' }, .4);
+        tlAnim(tl, pageNavlines, { bottom: '100vh' }, .8, 1.1);
+        tlAnim(tl, logo, { width: '100px' }, .4, 1);
+        tlAnim(tl, contactButton, {
             transform: 'rotate(0) translate(0, 0)'
-        }, 1.2);
+        }, .4, 1);
     }
 }
 
-pageCornerCloseButton.addEventListener('click', readMore);
+pageCornerCloseButton.addEventListener('click', readMoreFunction);
+
 
 /* contact overlay */
 
 const contactOverlay = document.querySelector('.contact-overlay');
-const contactButton = document.querySelector('.corner__button');
 const contactOverlayButton = document.querySelector('.contact-overlay__button');
 
 contactOverlay.style.display = 'none';
 
+let temp = null;
+
 contactButton.addEventListener('click', () => {
+    temp = horizontal;
+    horizontal = null;
     contactOverlay.style.display = 'flex';
 });
 
 contactOverlayButton.addEventListener('click', () => {
+    horizontal = temp;
     contactOverlay.style.display = 'none';
 });
-
-/* switching theme mode */
 
 
 /* fixed bug connected with resizing the window */

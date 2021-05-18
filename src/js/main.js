@@ -8,6 +8,7 @@ const tlAnim = (tl, elem, options, duration = .4, others = null) => {
     tl.to(elem, { duration, ease: 'power3', ...options }, others);
 }
 
+
 /* navigation */
 
 gsap.to(document.body, { duration: .3, top: 0, left: 0 });
@@ -153,8 +154,6 @@ contactOverlayButton.addEventListener('click', () => {
 
 
 /* navline service */
-
-
 
 const initNavlineService = () => {
 

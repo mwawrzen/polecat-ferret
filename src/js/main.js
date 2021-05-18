@@ -143,7 +143,7 @@ contactButton.addEventListener('click', () => {
 
     anim(contactOverlay, { bottom: 0 });
     let tl = gsap.timeline();
-    tlAnim(tl, contactOverlayButton, { left: '30px' }, .6);
+    tlAnim(tl, contactOverlayButton, { left: '24px' }, .6);
 
     temp = horizontal;
     horizontal = null;

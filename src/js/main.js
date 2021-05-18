@@ -149,14 +149,3 @@ contactOverlayButton.addEventListener('click', () => {
     horizontal = temp;
     contactOverlay.style.display = 'none';
 });
-
-
-/* fixed bug connected with resizing the window */
-
-window.addEventListener('resize', () => {
-
-    gsap.to(document.body, {
-        duration: .3,
-        left: -window.innerWidth * currentPage
-    });
-});

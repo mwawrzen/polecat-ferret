@@ -181,11 +181,9 @@ const initNavlineService = () => {
 
         const paragraphs = document.querySelectorAll(`.${e.target.dataset.article}`);
 
-        pageContents[currentPage].scrollTo({
-            top: paragraphs[currentPage].offsetTop,
-            left: 0,
-            behavior: 'smooth'
-        });
+        anim(pageContents[currentPage], {
+            scrollTo: paragraphs[currentPage].offsetTop
+        }, .8);
 
         addActiveClass(e.target);
     }));

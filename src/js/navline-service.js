@@ -2,46 +2,48 @@
 
 const initNavlineService = () => {
 
-    const circles = document.querySelectorAll('.page__nl-circle');
-
     let activeArticle = [
-        ...document.querySelectorAll('.page__navline')[currentPage].children
+        ...document.querySelectorAll('.page__navline')[c].children
     ][0];
 
     const addActiveClass = target => {
 
-        circles.forEach(item => item.classList.remove('page__nl-circle--active'));
+        navlineOptionButtons.forEach(item => {
+            item.classList.remove('page__nl-circle--active');
+        });
+
         target.classList.add('page__nl-circle--active');
     }
 
     addActiveClass(activeArticle);
 
-    circles.forEach(item => item.addEventListener('click', e => {
+    navlineOptionButtons.forEach(item => item.addEventListener('click', e => {
 
-        const paragraphs = document.querySelectorAll(`.${e.target.dataset.article}`);
+        const selector = `.${e.target.dataset.article}`;
+        const paragraphs = document.querySelectorAll(selector);
 
-        anim(pageContents[currentPage], {
-            scrollTo: paragraphs[currentPage].offsetTop
+        anim(pageContents[c], {
+            scrollTo: paragraphs[c].offsetTop
         }, .8);
 
         addActiveClass(e.target);
     }));
 
-    pageContents[currentPage].addEventListener('wheel', e => {
+    pageContents[c].addEventListener('wheel', e => {
 
-        const circles = [
-            ...document.querySelectorAll('.page__navline')[currentPage].children
+        const navlineOptionButtons = [
+            ...document.querySelectorAll('.page__navline')[c].children
         ];
 
-        circles.forEach(circle => {
+        navlineOptionButtons.forEach(circle => {
 
             const selector = `.${circle.dataset.article}`;
             const paragraph = document.querySelectorAll(selector);
 
             if (
-                pageContents[currentPage].clientHeight / 2 +
-                pageContents[currentPage].scrollTop >
-                paragraph[currentPage].offsetTop
+                pageContents[c].clientHeight / 2 +
+                pageContents[c].scrollTop >
+                paragraph[c].offsetTop
             )
                 activeArticle = circle;
         });

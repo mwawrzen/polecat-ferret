@@ -1,6 +1,4 @@
-/* changing pages with scroll */
-
-horizontal = true;
+/* main navigation service */
 
 window.addEventListener('wheel', e => {
 

@@ -1,7 +1,4 @@
-/* contact overlay */
-
-const contactOverlay = document.querySelector('.contact-overlay');
-const contactOverlayButton = document.querySelector('.contact-overlay__button');
+/* contact service */
 
 let temp = null;
 

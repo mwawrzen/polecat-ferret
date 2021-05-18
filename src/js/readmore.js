@@ -1,23 +1,9 @@
-/* readmore function */
-
-const pageCorner = document.querySelector('.corner');
-const pageCornerCloseButton = document.querySelector('.corner__close');
-const logo = document.querySelector('.corner__logo');
-const contactButton = document.querySelector('.corner__button');
-const navMenu = document.querySelector('.nav__menu');
-
-const pageHeader = document.querySelectorAll('.page__title');
-const pageDescription = document.querySelectorAll('.page__subtitle');
-const pageReadMoreButton = document.querySelectorAll('.page__button');
-const pageContainer = document.querySelectorAll('.page__container');
-const pageNavlines = document.querySelectorAll('.page__navline-area');
-const pageContents = document.querySelectorAll('.page__content');
+/* main content service */
 
 const readMoreFunction = () => {
 
     initNavlineService();
     horizontal = !horizontal;
-    const c = currentPage;
 
     if (!horizontal && horizontal !== null) {
 

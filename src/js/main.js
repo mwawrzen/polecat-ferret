@@ -137,19 +137,25 @@ pageCornerCloseButton.addEventListener('click', readMoreFunction);
 const contactOverlay = document.querySelector('.contact-overlay');
 const contactOverlayButton = document.querySelector('.contact-overlay__button');
 
-contactOverlay.style.display = 'none';
-
 let temp = null;
 
 contactButton.addEventListener('click', () => {
+
+    anim(contactOverlay, { bottom: 0 });
+    let tl = gsap.timeline();
+    tlAnim(tl, contactOverlayButton, { left: '30px' }, .6);
+
     temp = horizontal;
     horizontal = null;
-    contactOverlay.style.display = 'flex';
 });
 
 contactOverlayButton.addEventListener('click', () => {
+
+    anim(contactOverlay, { bottom: '100vh' });
+    let tl = gsap.timeline();
+    tlAnim(tl, contactOverlayButton, { left: '-50px' }, .4);
+
     horizontal = temp;
-    contactOverlay.style.display = 'none';
 });
 
 

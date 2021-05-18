@@ -35,7 +35,6 @@ body {
 }
 .corner__logo-img {
   width: 100%;
-  cursor: pointer;
 }
 .corner__button {
   margin: 10px 0 0 3px;
@@ -248,7 +247,7 @@ body {
 .contact-overlay__button {
   position: fixed;
   z-index: 200;
-  top: 30px;
+  top: 12px;
   left: -50px;
   width: 50px;
   height: 50px;

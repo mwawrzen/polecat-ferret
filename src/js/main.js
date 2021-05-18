@@ -1,4 +1,4 @@
-/* gsap service */
+/* gsap functions */
 
 const anim = (elem, options, duration = .4) => {
     gsap.to(elem, { duration, ease: 'power3', ...options});
@@ -192,12 +192,13 @@ const initNavlineService = () => {
 
         circles.forEach(circle => {
 
-            const paragraph = document
-                .querySelectorAll(`.${circle.dataset.article}`)[currentPage];
+            const selector = `.${circle.dataset.article}`;
+            const paragraph = document.querySelectorAll(selector);
 
             if (
-                pageContents[currentPage].clientHeight / 2 + pageContents[currentPage].scrollTop >
-                paragraph.offsetTop
+                pageContents[currentPage].clientHeight / 2 +
+                pageContents[currentPage].scrollTop >
+                paragraph[currentPage].offsetTop
             )
                 activeArticle = circle;
         });

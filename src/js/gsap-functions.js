@@ -1,4 +1,4 @@
-/* gsap functions */
+/* gsap functions service */
 
 const anim = (elem, options, duration = .4) => {
     gsap.to(elem, { duration, ease: 'power3', ...options});

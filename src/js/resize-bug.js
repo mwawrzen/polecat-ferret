@@ -4,6 +4,6 @@ window.addEventListener('resize', () => {
 
     gsap.to(document.body, {
         duration: .3,
-        left: -window.innerWidth * currentPage
+        left: -window.innerWidth * c
     });
 });

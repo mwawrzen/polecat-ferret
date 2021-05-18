@@ -1,6 +1,6 @@
 /* global variables */
 
-let currentPage = c = 0;
+let c = 0; // current page number
 const pagesNumber = 3; // pages are numbered from 0
 
 horizontal = true; // scroll direction

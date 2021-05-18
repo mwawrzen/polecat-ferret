@@ -50,45 +50,118 @@ const pageDescription = document.querySelectorAll('.page__subtitle');
 const pageReadMoreButton = document.querySelectorAll('.page__button');
 const pageCorner = document.querySelector('.corner');
 const pageCornerCloseButton = document.querySelector('.corner__close');
+const navMenu = navButtons[0].parentElement.parentElement;
 
 
 function readMore() {
 
     horizontal = !horizontal;
-    let nav_menu = navButtons[0].parentElement.parentElement;
 
     if (!horizontal) {
 
         pageContents[currentPage].scrollTop = 0;
         document.body.style.overflow = 'scroll';
 
-        gsap.to(pageContents[currentPage], {duration: .4, top: '20vh'});
-        gsap.to(pageContainer[currentPage], {duration: .4, top: '150px'});
-        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: '40px'});
-        gsap.to(pageDescription[currentPage], {duration: .4, opacity: 0});
-        gsap.to(pageReadMoreButton[currentPage], {duration: .4, opacity: 0});
-        gsap.to(nav_menu, {duration: .4, opacity: 0});
+        gsap.to(pageContents[currentPage], {
+            duration: .4,
+            top: '20vh'
+        });
+        gsap.to(pageContainer[currentPage], {
+            duration: .4,
+            top: '150px'
+        });
+        gsap.to(pageHeader[currentPage], {
+            duration: .4,
+            fontSize: '40px'
+        });
+        gsap.to(pageDescription[currentPage], {
+            duration: .4,
+            opacity: 0
+        });
+        gsap.to(pageReadMoreButton[currentPage], {
+            duration: .4,
+            opacity: 0
+        });
+        gsap.to(navMenu, {
+            duration: .4,
+            opacity: 0
+        });
 
         let tl = gsap.timeline();
-        tl.to(pageCorner, {duration: .4, top: '70px'});
-        tl.to(pageCornerCloseButton, {duration: .2, left: '0px'});
-        tl.to(pageNavlines[currentPage], {duration: .8, bottom: '0'});
+
+        tl.to(pageCorner, {
+            duration: .4,
+            top: '70px'
+        });
+        tl.to(pageCornerCloseButton, {
+            duration: .2, left: '3px'});
+        tl.to(pageNavlines[currentPage], {
+            duration: .8,
+            bottom: '0',
+            ease: 'power3'
+        },1.5);
+        tl.to(document.querySelector('.corner__logo'), {
+            duration: .4,
+            width: '50px'
+        }, 1);
+
+        tl.to(document.querySelector('.corner__button'), {
+            duration: .4,
+            transform: 'rotate(-90deg) translate(-50%, -50%)'
+        }, 1);
 
     } else {
 
         document.body.style.overflow = 'hidden';
 
-        gsap.to(pageContents[currentPage], {duration: .4, top: '100vh'});
-        gsap.to(pageContainer[currentPage], {duration: .4, top: '50%'});
-        gsap.to(pageHeader[currentPage], {duration: .4, fontSize: '80px'});
-        gsap.to(pageDescription[currentPage], {duration: .4, opacity: 1});
-        gsap.to(pageReadMoreButton[currentPage], {duration: .4, opacity: 1});
-        gsap.to(nav_menu, {duration: .4, opacity: 1});
+        gsap.to(pageContents[currentPage], {
+            duration: .4,
+            top: '100vh'
+        });
+        gsap.to(pageContainer[currentPage], {
+            duration: .4,
+            top: '50%'
+        });
+        gsap.to(pageHeader[currentPage], {
+            duration: .4,
+            fontSize: '80px'
+        });
+        gsap.to(pageDescription[currentPage], {
+            duration: .4,
+            opacity: 1
+        });
+        gsap.to(pageReadMoreButton[currentPage], {
+            duration: .4,
+            opacity: 1
+        });
+        gsap.to(navMenu, {
+            duration: .4,
+            opacity: 1
+        });
 
         let tl = gsap.timeline();
-        tl.to(pageCornerCloseButton, {duration: .2, left: '-70px'});
-        tl.to(pageCorner, {duration: .4, top: '20px'});
-        tl.to(pageNavlines[currentPage], {duration: .8, bottom: '100vh'});
+
+        tl.to(pageCornerCloseButton, {
+            duration: .2,
+            left: '-70px'
+        });
+        tl.to(pageCorner, {
+            duration: .4,
+            top: '20px'
+        });
+        tl.to(pageNavlines[currentPage], {
+            duration: .8,
+            bottom: '100vh',
+            ease: 'power3'
+        }, 1);
+        tl.to(document.querySelector('.corner__logo'), {
+            duration: .4,
+            width: '100px'
+        }, 1.2);
+        tl.to(document.querySelector('.corner__button'), {
+            duration: .4,
+            transform: 'rotate(0) translate(0, 0)'
+        }, 1.2);
     }
 }
 

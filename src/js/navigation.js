@@ -1,15 +1,8 @@
-/* navigation */
+/* navigation service */
 
 gsap.to(document.body, { duration: .3, top: 0, left: 0 });
 
-const pagesNumber = 3; // first page -> 0
-let currentPage = 0;
-const navButtons = document.querySelectorAll('.nav__link');
-
 const navTo = currPage => {
-
-    if (currPage > pagesNumber)
-        console.error('Wrong current page number');
 
     gsap.to(document.body, {
         duration: .8,

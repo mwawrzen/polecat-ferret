@@ -43,6 +43,7 @@ window.addEventListener('wheel', e => {
 });
 
 const pageContents = document.querySelectorAll('.page__content');
+const pageNavlines = document.querySelectorAll('.page__navline-area');
 const pageContainer = document.querySelectorAll('.page__container');
 const pageHeader = document.querySelectorAll('.page__title');
 const pageDescription = document.querySelectorAll('.page__subtitle');
@@ -71,6 +72,7 @@ function readMore() {
         let tl = gsap.timeline();
         tl.to(pageCorner, {duration: .4, top: '70px'});
         tl.to(pageCornerCloseButton, {duration: .2, left: '0px'});
+        tl.to(pageNavlines[currentPage], {duration: .8, bottom: '0'});
 
     } else {
 
@@ -86,6 +88,7 @@ function readMore() {
         let tl = gsap.timeline();
         tl.to(pageCornerCloseButton, {duration: .2, left: '-70px'});
         tl.to(pageCorner, {duration: .4, top: '20px'});
+        tl.to(pageNavlines[currentPage], {duration: .8, bottom: '100vh'});
     }
 }
 

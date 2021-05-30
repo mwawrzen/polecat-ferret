@@ -16,6 +16,9 @@ body
     font-family: sans-serif
     overflow: hidden
     position: fixed
+    background-image: url("../assets/img/tlo.png")
+    background-repeat: no-repeat
+    background-size: cover
 
 .corner
     position: fixed
@@ -24,6 +27,7 @@ body
     left: 20px
     padding: 5px
     overflow: visible
+
     &__logo
         width: 100px
 
@@ -135,44 +139,47 @@ body
 
     &__navline
         height: 100%
-        width: 2px
+        width: 4px
         background: #222
         position: relative
         overflow: visible
+        display: flex
+        padding-top: 25vh
+        padding-bottom: 20px
+        flex-direction: column
+        justify-content: space-between
+
+        &__inf
+            background-color: #5ce
+
+        & > div
+            border-color: #3ba9d1
 
     &__nl-circle
-        position: absolute
         width: 30px
         height: 30px
         border: 4px solid #222
         border-radius: 50%
         background: #fff
-        left: 0
         transform: translateX(-47%)
         cursor: pointer
         transition: .3s
         overflow: visible
 
         &--active
-            background: #222
-        &--1
-            top: 260px
-
-        &--2
-            top: 390px
-
-        &--3
-            top: 520px
+            background: #3ba9d1
 
         & > p
             z-index: 10000
             position: absolute
             text-align: right
-            font-family: 'Open Sans Condensed', open-sans
+            width: 100px
+            font-family: 'Open Sans Condensed', open-sans, serif
             font-size: 18px
             top: 0
             left: 0
-            transform: translate(-120%, -30%)
+            transform: translate(-125%, -30%)
+            padding: 3px
 
     &__content
         padding: 2rem
@@ -182,14 +189,19 @@ body
         width: 70vw
         height: 80vh
         overflow: scroll
+        background-color: white
+        border-top: 2px #4cbae2 solid
 
     &__article
+        margin-bottom: 20px
 
         & > h1
-            font-size: 24px
-            margin: 1rem 4rem 1rem 4rem
+            font-size: 30px
+            margin: 1rem 1rem 1rem 4rem
             padding: 2rem 0 0 2rem
-            border-top: 1px solid #222
+            border-bottom: 1px solid #4cbae2
+            color: #4cbae2
+            font-variant: small-caps
 
         & > p
             font-size: 20px
@@ -197,6 +209,21 @@ body
             text-indent: 4rem
             padding: 2rem
             text-align: justify
+
+        & div
+            width: 80%
+            margin: 0 auto
+            display: flex
+            justify-content: space-between
+            padding: 20px
+
+        & img
+            width: 30%
+            border-radius: 20px
+
+            &:hover
+                transform: scale(1.1)
+
 
 .contact-overlay
     width: 100vw

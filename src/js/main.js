@@ -25,13 +25,3 @@ const contactOverlay = document.querySelector('.contact-overlay');
 const contactOverlayButton = document.querySelector('.contact-overlay__button');
 
 const navlineOptionButtons = document.querySelectorAll('.page__nl-circle');
-
-/* rwd breakpoints */
-
-const breakpoints = {
-    xs: 512,
-    sm: 768,
-    md: 896,
-    lg: 1152,
-    xl: 1280
-}

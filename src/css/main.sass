@@ -1,27 +1,10 @@
-/* rwd */
-
-$xs: 512px
-$sm: 768px
-$md: 896px
-$lg: 1152px
-$xl: 1280px
-
-/* animations */
-
-@keyframes move
-    0%
-        transform: translateY(0)
-    50%
-        transform: translateY(-15px)
-    100%
-        transform: translateY(0)
-
 *
     margin: 0
     padding: 0
     box-sizing: border-box
     -ms-overflow-style: none
     scrollbar-width: none
+    overflow: hidden
 
     &::-webkit-scrollbar
         display: none
@@ -31,6 +14,7 @@ body
     display: flex
     width: 400vw
     font-family: sans-serif
+    overflow: hidden
     position: fixed
     background-image: url("../assets/img/tlo.png")
     background-repeat: no-repeat
@@ -49,8 +33,6 @@ body
 
     &__logo-img
         width: 100%
-        @media (max-width: $xs)
-            width: 50%
 
     &__button
         margin: 10px 0 0 3px
@@ -80,8 +62,6 @@ body
             height: 50px
             background: #222
             position: absolute
-            @media (max-width: $xs)
-                height: 30px
 
         &::after
             transform: rotate(45deg)
@@ -136,14 +116,10 @@ body
     &__title
         font-size: 80px
         font-weight: 700
-        @media (max-width: $xs)
-            font-size: 40px
 
     &__subtitle
         margin-top: 1rem
         font-size: 20px
-        @media (max-width: $xs)
-            font-size: 16px
 
     &__button
         padding: 5px 10px
@@ -158,8 +134,6 @@ body
         display: flex
         justify-content: flex-end
         padding-right: 2rem
-        @media (max-width: $xs)
-            display: none
 
     &__navline
         height: 100%
@@ -307,6 +281,7 @@ body
             &:hover
                 transform: scale(1.1)
 
+
 .contact-overlay
     width: 100vw
     height: 100vh
@@ -318,10 +293,8 @@ body
     left: 0
     display: flex
     flex-flow: column
-    padding: 1rem 0 4rem 0
-    @media (max-width: $md)
-        overflow-y: scroll
-        display: block
+    align-items: center
+    justify-content: center
 
     &__button
         position: fixed
@@ -346,8 +319,6 @@ body
             height: 50px
             background: #eee
             position: absolute
-            @media (max-width: $md)
-                height: 30px
 
         &::after
             transform: rotate(45deg)
@@ -356,134 +327,51 @@ body
             transform: rotate(-45deg)
 
     &__title
-        font-size: 80px
-        margin-top: 5rem
-        padding-left: 9rem
-        @media (max-width: $md)
-            padding-left: 0
-            margin-top: 15vh
-            font-size: 40px
-            text-align: center
+        font-size: 72px
 
     &__subtitle
         font-size: 20px
-        border-bottom: 1px dotted rgba(238, 238, 238, .3)
-        margin: 0 3rem
         padding-bottom: 1.5rem
-        padding-left: 6rem
-        @media (max-width: $md)
-            padding-left: 0
-            margin: 0 2rem
-            font-size: 16px
-            text-align: center
 
     &__content
-        flex: 1
+        border-top: 2px solid rgba(238, 238, 238, .3)
+        padding: 50px
+        margin: 30px
+        width: 70vw
         display: flex
-        justify-content: space-evenly
-        flex-flow: row-reverse
-        padding: 3rem 5vw
-        @media (max-width: $md)
-            padding: 0
+        height: 400px
 
     &__left
-        flex: 1
-        display: flex
-        flex-flow: column
-        justify-content: center
-        padding-right: 5vw
-        @media (max-width: $md)
-            padding-right: 0
+        width: 50%
+        height: 100%
+        text-align: center
 
     &__address
-        font-size: 20px
-        line-height: 1.5
+        height: calc( 100% - 3rem - 40px )
+        font-size: 1.25rem
         display: flex
-        flex-flow: column
-        margin-left: 2rem
-        text-align: right
-        padding-right: 20px
-        @media (max-width: $md)
-            padding-right: 0
-            text-align: center
-            margin-top: 2rem
-            margin-left: 0
-            font-size: 18px
+        justify-content: center
+        align-items: center
 
-        & > span.p
-            margin-bottom: 20px
+    &__map
+        width: 50%
+
+        & > iframe
+            width: 100%
+            height: 100%
+            border-radius: 50px
 
     &__socials
-        margin-top: 20px
         font-size: 3rem
         display: flex
-        justify-content: flex-end
         align-items: center
-        @media (max-width: $md)
-            justify-content: center
+        justify-content: center
 
         & > a
             text-decoration: none
             color: #fff
             display: block
-            margin: 20px
-            position: relative
-            transition: .2s
+            padding: 20px
 
             &:hover
                 color: var(--color)
-
-    &__map-button
-        width: 100vw
-        position: fixed
-        display: none
-        justify-content: center
-        align-items: center
-        flex-flow: column
-        bottom: 0
-        @media (max-width: $md)
-            display: flex
-
-        & > span
-            height: 30px
-            position: relative
-            animation: move 1s infinite ease
-
-            &::before,
-            &::after
-                position: absolute
-                top: 10px
-                left: 50%
-                content: ''
-                display: block
-                width: 6px
-                height: 25px
-                background: #eee
-
-            &::before
-                transform: translate(-50%) rotateZ(45deg) translateX(-10px)
-
-            &::after
-                transform: translate(-50%) rotateZ(-45deg) translateX(10px)
-
-        & > p
-            text-align: center
-            margin-bottom: 10px
-            text-transform: uppercase
-            letter-spacing: 1px
-            font-weight: 700
-
-
-    &__map
-        flex: 2
-
-        @media (max-width: $md)
-            display: none
-            width: 100vw
-            height: 100vh
-            padding: 0
-
-        & > iframe
-            width: 100%
-            height: 100%
-            border-radius: 20px

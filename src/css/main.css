@@ -154,8 +154,26 @@ body {
 .page__navline__inf {
   background-color: #5ce;
 }
-.page__navline > div {
+.page__navline__tele {
+  background-color: #536;
+}
+.page__navline__ele {
+  background-color: #394;
+}
+.page__navline__pro {
+  background-color: #236;
+}
+.page__navline__inf > div {
   border-color: #3ba9d1;
+}
+.page__navline__tele > div {
+  border-color: #40224e;
+}
+.page__navline__ele > div {
+  border-color: #21842a;
+}
+.page__navline__pro > div {
+  border-color: #11254a;
 }
 .page__nl-circle {
   width: 30px;
@@ -168,8 +186,17 @@ body {
   transition: 0.3s;
   overflow: visible;
 }
-.page__nl-circle--active {
+.page__nl-circle--active1 {
   background: #3ba9d1;
+}
+.page__nl-circle--active2 {
+  background: #40224e;
+}
+.page__nl-circle--active3 {
+  background: #21842a;
+}
+.page__nl-circle--active4 {
+  background: #11254a;
 }
 .page__nl-circle > p {
   z-index: 10000;
@@ -192,7 +219,18 @@ body {
   height: 80vh;
   overflow: scroll;
   background-color: white;
+}
+.page__content__inf {
   border-top: 2px #4cbae2 solid;
+}
+.page__content__tele {
+  border-top: 2px #51335f solid;
+}
+.page__content__ele {
+  border-top: 2px #32953b solid;
+}
+.page__content__pro {
+  border-top: 2px #22365b solid;
 }
 .page__article {
   margin-bottom: 20px;
@@ -201,9 +239,28 @@ body {
   font-size: 30px;
   margin: 1rem 1rem 1rem 4rem;
   padding: 2rem 0 0 2rem;
+  font-variant: small-caps;
+  line-height: 0.1em;
+  overflow: visible;
+}
+.page__article > h1 > span {
+  background-color: white;
+}
+.page__article--inf > h1 {
   border-bottom: 1px solid #4cbae2;
   color: #4cbae2;
-  font-variant: small-caps;
+}
+.page__article--tele > h1 {
+  border-bottom: 1px solid #51335f;
+  color: #51335f;
+}
+.page__article--ele > h1 {
+  border-bottom: 1px solid #32953b;
+  color: #32953b;
+}
+.page__article--pro > h1 {
+  border-bottom: 1px solid #22365b;
+  color: #22365b;
 }
 .page__article > p {
   font-size: 20px;

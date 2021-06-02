@@ -384,6 +384,7 @@ body {
   }
 }
 .contact-overlay__content {
+  background: red;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;

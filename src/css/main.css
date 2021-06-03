@@ -601,6 +601,12 @@ body {
     font-size: 18px;
   }
 }
+.contact-overlay__address > span {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
 .contact-overlay__address > span.p {
   margin-bottom: 20px;
 }

@@ -12,7 +12,13 @@ const readMoreFunction = () => {
 
         anim(pageContents[c], { top: '20vh' });
         anim(pageContainer[c], { top: '150px' });
-        anim(pageHeader[c], { fontSize: '40px' });
+        if (window.innerWidth <= breakpoints.xs) {
+            console.log('mobile');
+            anim(pageHeader[c], { fontSize: '20px' });
+        } else {
+            console.log('desktop');
+            anim(pageHeader[c], { fontSize: '40px' });
+        }
         anim(pageDescription[c], { opacity: 0 });
         anim(pageReadMoreButton[c], { opacity: 0 });
         anim(navMenu, { opacity: 0 });
@@ -33,7 +39,13 @@ const readMoreFunction = () => {
 
         anim(pageContents[c], { top: '100vh' });
         anim(pageContainer[c], { top: '50%' });
-        anim(pageHeader[c], { fontSize: '80px' });
+        if (window.innerWidth <= breakpoints.xs) {
+            console.log('mobile');
+            anim(pageHeader[c], { fontSize: '40px' });
+        } else {
+            console.log('desktop');
+            anim(pageHeader[c], { fontSize: '80px' });
+        }
         anim(pageDescription[c], { opacity: 1 });
         anim(pageReadMoreButton[c], { opacity: 1 });
         anim(navMenu, { opacity: 1 });

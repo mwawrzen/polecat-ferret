@@ -6,6 +6,8 @@ const pagesNumber = 3; // pages are numbered from 0
 horizontal = true; // scroll direction
 isContactOverlay = false;
 
+const themeButton = document.querySelector('.theme-button');
+
 const navMenu = document.querySelector('.nav__menu');
 const navButtons = document.querySelectorAll('.nav__link');
 

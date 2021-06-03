@@ -31,6 +31,11 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-overflow-style: none;

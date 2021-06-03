@@ -4,6 +4,7 @@ let c = 0; // current page number
 const pagesNumber = 3; // pages are numbered from 0
 
 horizontal = true; // scroll direction
+isContactOverlay = false;
 
 const navMenu = document.querySelector('.nav__menu');
 const navButtons = document.querySelectorAll('.nav__link');
@@ -23,6 +24,7 @@ const pageContents = document.querySelectorAll('.page__content');
 
 const contactOverlay = document.querySelector('.contact-overlay');
 const contactOverlayButton = document.querySelector('.contact-overlay__button');
+const contactMapButton = document.querySelector('.contact-overlay__map-button');
 
 const navlineOptionButtons = document.querySelectorAll('.page__nl-circle');
 

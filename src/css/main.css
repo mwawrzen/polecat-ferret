@@ -547,6 +547,18 @@ body {
             justify-content: center;
   }
 }
+.contact-overlay__socials > a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin: 20px;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.contact-overlay__socials > a:hover {
+  color: var(--color);
+}
 .contact-overlay__left {
   width: 50%;
   height: 100%;
@@ -564,38 +576,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.contact-overlay__map {
-  width: 50%;
-}
-.contact-overlay__map > iframe {
-  width: 100%;
-  height: 100%;
-  border-radius: 50px;
-}
-.contact-overlay__socials {
-  font-size: 3rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.contact-overlay__socials > a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-  margin: 20px;
-  position: relative;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-.contact-overlay__socials > a:hover {
-  color: var(--color);
 }
 .contact-overlay__map-button {
   width: 100vw;

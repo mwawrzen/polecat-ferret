@@ -12,25 +12,20 @@ const readMoreFunction = () => {
 
         pageDescription[c].style.display = 'none';
         anim(pageContents[c], { top: '20vh' });
-        anim(pageContainer[c], { top: '20vh' });
-        if (window.innerWidth <= breakpoints.xs) {
-            anim(pageHeader[c], { fontSize: '2vh' });
-        } else {
-            anim(pageHeader[c], { fontSize: '4vh' });
-        }
+        anim(pageContainer[c], { top: '18vh' });
+        anim(pageHeader[c], { fontSize: '4vh' });
         anim(pageDescription[c], { opacity: 0, display: 'none' });
-        anim(pageReadMoreButton[c], { opacity: 0 });
+        anim(pageReadMoreButton[c], { opacity: 0 }, .2);
         anim(navMenu, { opacity: 0 });
+        anim(logo, { opacity: 0 }, 0);
+        anim(contactButton, { opacity: 0 }, 0);
+        anim(themeButton, { opacity: 0 }, 0);
 
         let tl = gsap.timeline();
 
         tlAnim(tl, pageCorner, { top: '70px' }, .4);
         tlAnim(tl, pageCornerCloseButton, { left: '3px' }, .2);
         tlAnim(tl, pageNavlines, { bottom: '0' }, .6, .5);
-        tlAnim(tl, logo, { width: '50px' }, .4, 1);
-        tlAnim(tl, contactButton, {
-            transform: 'rotate(-90deg) translate(-50%, -50%)'
-        }, .4, 1);
 
     } else {
 
@@ -49,6 +44,9 @@ const readMoreFunction = () => {
         anim(pageDescription[c], { opacity: 1 });
         anim(pageReadMoreButton[c], { opacity: 1 });
         anim(navMenu, { opacity: 1 });
+        anim(logo, { opacity: 1 }, .2);
+        anim(contactButton, { opacity: 1 }, .2);
+        anim(themeButton, { opacity: 1 }, .2);
 
         let tl = gsap.timeline();
 

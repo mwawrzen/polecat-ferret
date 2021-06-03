@@ -80,8 +80,30 @@ body {
   }
 }
 .corner__button {
-  margin: 10px 0 0 3px;
-  padding: 3px 10px;
+  background: transparent;
+  border: 2px solid #222;
+  margin: 1rem 0;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media (max-width: 512px) {
+  .corner__button {
+    margin-left: 3px;
+  }
+}
+.corner__button:hover {
+  background: #222;
+  color: #eee;
+}
+@media (max-width: 512px) {
+  .corner__button > span {
+    display: none;
+  }
 }
 .corner__close {
   position: absolute;
@@ -179,7 +201,7 @@ body {
   font-size: 80px;
   font-weight: 700;
 }
-@media (max-width: 512px) {
+@media (max-width: 768px) {
   .page__title {
     font-size: 40px;
   }
@@ -188,14 +210,32 @@ body {
   margin-top: 1rem;
   font-size: 20px;
 }
-@media (max-width: 512px) {
+@media (max-width: 768px) {
   .page__subtitle {
     font-size: 16px;
   }
 }
 .page__button {
-  padding: 5px 10px;
-  margin-top: 5rem;
+  background: transparent;
+  border: 2px solid #333;
+  margin: 1rem 0;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media (max-width: 896px) {
+  .page__button {
+    font-size: 16px;
+  }
+}
+.page__button:hover {
+  background: #222;
+  color: #eee;
 }
 .page__navline-area {
   position: absolute;

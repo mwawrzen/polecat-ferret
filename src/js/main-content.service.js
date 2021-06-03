@@ -26,7 +26,7 @@ const readMoreFunction = () => {
 
         tlAnim(tl, pageCorner, { top: '70px' }, .4);
         tlAnim(tl, pageCornerCloseButton, { left: '3px' }, .2);
-        tlAnim(tl, pageNavlines, { bottom: '0' }, .8, 1.5);
+        tlAnim(tl, pageNavlines, { bottom: '0' }, .6, .5);
         tlAnim(tl, logo, { width: '50px' }, .4, 1);
         tlAnim(tl, contactButton, {
             transform: 'rotate(-90deg) translate(-50%, -50%)'
@@ -54,7 +54,7 @@ const readMoreFunction = () => {
 
         tlAnim(tl, pageCornerCloseButton, { left: '-70px' }, .2);
         tlAnim(tl, pageCorner, { top: '20px' }, .4);
-        tlAnim(tl, pageNavlines, { bottom: '100vh' }, .8, 1.1);
+        tlAnim(tl, pageNavlines, { bottom: '100vh' }, .4);
         tlAnim(tl, logo, { width: '100px' }, .4, 1);
         tlAnim(tl, contactButton, {
             transform: 'rotate(0) translate(0, 0)'

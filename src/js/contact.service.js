@@ -7,7 +7,7 @@ contactButton.addEventListener('click', () => {
     anim(contactOverlay, { bottom: 0 });
     let tl = gsap.timeline();
     tlAnim(tl, contactOverlayButton, { left: '24px' }, .6);
-    if (window.innerWidth > breakpoints.md)
+    if (window.innerWidth <= breakpoints.md)
         tlAnim(tl, contactMapButton, { bottom: 0 }, .8);
 
     temp = horizontal;

@@ -23,6 +23,7 @@ const pageContents = document.querySelectorAll('.page__content');
 
 const contactOverlay = document.querySelector('.contact-overlay');
 const contactOverlayButton = document.querySelector('.contact-overlay__button');
+const contactMapButton = document.querySelector('.contact-overlay__map-button');
 
 const navlineOptionButtons = document.querySelectorAll('.page__nl-circle');
 

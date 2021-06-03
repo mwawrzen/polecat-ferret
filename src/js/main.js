@@ -4,6 +4,7 @@ let c = 0; // current page number
 const pagesNumber = 3; // pages are numbered from 0
 
 horizontal = true; // scroll direction
+isContactOverlay = false;
 
 const navMenu = document.querySelector('.nav__menu');
 const navButtons = document.querySelectorAll('.nav__link');

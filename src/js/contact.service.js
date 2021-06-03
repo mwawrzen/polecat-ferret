@@ -12,6 +12,7 @@ contactButton.addEventListener('click', () => {
 
     temp = horizontal;
     horizontal = null;
+    isContactOverlay = true;
 });
 
 contactOverlayButton.addEventListener('click', () => {
@@ -22,4 +23,5 @@ contactOverlayButton.addEventListener('click', () => {
     tlAnim(tl, contactMapButton, { bottom: '-80px' }, .6);
 
     horizontal = temp;
+    isContactOverlay = false;
 });

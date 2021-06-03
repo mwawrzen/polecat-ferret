@@ -10,5 +10,6 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > breakpoints.md)
         contactMapButton.style.bottom = '-80px';
     else
-        contactMapButton.style.bottom = 0;
+        if (isContactOverlay)
+            contactMapButton.style.bottom = 0;
 });

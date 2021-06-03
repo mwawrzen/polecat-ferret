@@ -6,8 +6,8 @@
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -20,8 +20,8 @@
             transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -653,6 +653,7 @@ body {
       -ms-flex-flow: column;
           flex-flow: column;
   bottom: -80px;
+  cursor: pointer;
 }
 .contact-overlay__map-button > span {
   height: 30px;
@@ -692,7 +693,18 @@ body {
 }
 @media (max-width: 896px) {
   .contact-overlay__map {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    background: #111;
+    position: fixed;
+    z-index: 300;
+    left: 0;
+    bottom: -100vh;
     width: 100vw;
     height: 100vh;
     padding: 0;
@@ -703,6 +715,50 @@ body {
   height: 100%;
   border-radius: 20px;
 }
+@media (max-width: 896px) {
+  .contact-overlay__map > iframe {
+    -webkit-box-flex: 13;
+        -ms-flex: 13;
+            flex: 13;
+    height: auto;
+    border-radius: 2px;
+  }
+}
 .contact-overlay__map > iframe:hover {
   color: var(--color);
+}
+.contact-overlay__map > span {
+  margin-top: 1rem;
+  font-size: 2rem;
+  position: relative;
+  display: none;
+  -webkit-animation: move 1s infinite ease;
+          animation: move 1s infinite ease;
+  cursor: pointer;
+}
+@media (max-width: 896px) {
+  .contact-overlay__map > span {
+    display: block;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+.contact-overlay__map > span::before, .contact-overlay__map > span::after {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 25px;
+  background: #eee;
+}
+.contact-overlay__map > span::before {
+  -webkit-transform: translate(-50%) rotateZ(-45deg) translateX(-10px);
+          transform: translate(-50%) rotateZ(-45deg) translateX(-10px);
+}
+.contact-overlay__map > span::after {
+  -webkit-transform: translate(-50%) rotateZ(45deg) translateX(10px);
+          transform: translate(-50%) rotateZ(45deg) translateX(10px);
 }

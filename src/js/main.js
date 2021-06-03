@@ -26,6 +26,11 @@ const contactOverlay = document.querySelector('.contact-overlay');
 const contactOverlayButton = document.querySelector('.contact-overlay__button');
 const contactMapButton = document.querySelector('.contact-overlay__map-button');
 
+const selector = '.contact-overlay__map-close-button';
+const contactMapCloseButton = document.querySelector(selector);
+
+const contactMap = document.querySelector('.contact-overlay__map');
+
 const navlineOptionButtons = document.querySelectorAll('.page__nl-circle');
 
 /* rwd breakpoints */

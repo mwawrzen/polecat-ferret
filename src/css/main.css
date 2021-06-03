@@ -411,15 +411,16 @@ body {
 }
 @media (max-width: 1152px) {
   .page__article > h1 {
+    padding: 0;
     font-size: 20px;
   }
 }
 @media (max-width: 768px) {
   .page__article > h1 {
+    margin: 1rem;
     line-height: 100%;
     border-bottom: none;
     text-align: center;
-    padding: 0;
   }
 }
 @media (max-width: 512px) {

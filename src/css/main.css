@@ -436,6 +436,9 @@ body {
 .page__article {
   margin-bottom: 20px;
 }
+.page__article:last-child {
+  margin-bottom: 80px;
+}
 .page__article > h3 {
   font-size: 30px;
   margin: 1rem 1rem 1rem 4rem;
@@ -899,4 +902,3 @@ input:checked + .slider:before {
   -webkit-transform: translateX(1rem);
   transform: translateX(1rem);
 }
-/*# sourceMappingURL=main.css.map */

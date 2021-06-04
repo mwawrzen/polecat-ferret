@@ -10,13 +10,14 @@ $xl: 1280px
 
 .light
 
-    --font: #000
-    --bg: #fff
-    --border: #333
+    --font: #111
+    --bg: #eee
+    --border: #111
     --contact-bg: rgba(20, 20, 20, .98)
-    --contact-map-bg: #111
+    --contact-map-bg: #eee
     --contact-font: #eee
-    --contact-border: #333
+    --contact-button: #111
+    --contact-border: #eee
     --inf: #3ba9d1
     --tel: #40224e
     --ele: #21842a
@@ -24,18 +25,19 @@ $xl: 1280px
     --logo-br: 1
 
 .dark
-    --font: #fff
-    --bg: #161616
-    --border: #aaa
+    --font: #ddd
+    --bg: #111
+    --border: #ccc
     --contact-bg: rgba(20, 20, 20, .98)
     --contact-map-bg: #111
     --contact-font: #eee
-    --contact-border: #333
+    --contact-button: #eee
+    --contact-border: #111
     --inf: #7fcae6
     --tel: #644770
     --ele: #3e8344
     --pro: #32466b
-    --logo-br: 100
+    --logo-br: 7
 
 /* animations */
 
@@ -126,7 +128,7 @@ body
     &__button
         background: transparent
         border: 2px solid var(--border)
-        color: var(--border)
+        color: var(--contact-button)
         margin: 1rem 0
         outline: none
         padding: 10px 15px
@@ -204,7 +206,7 @@ body
     &__button
         background: transparent
         border: 2px solid var(--border)
-        color: var(--border)
+        color: var(--contact-button)
         margin: 1rem 0
         outline: none
         padding: 10px 30px

@@ -1,4 +1,35 @@
 /* rwd */
+/* colors */
+.light {
+  --font: #000;
+  --bg: #fff;
+  --border: #333;
+  --contact-bg: rgba(20, 20, 20, .98);
+  --contact-map-bg: #111;
+  --contact-font: #eee;
+  --contact-border: #333;
+  --inf: #3ba9d1;
+  --tel: #40224e;
+  --ele: #21842a;
+  --pro: #11254a;
+  --logo-br: 1;
+}
+
+.dark {
+  --font: #fff;
+  --bg: #161616;
+  --border: #aaa;
+  --contact-bg: rgba(20, 20, 20, .98);
+  --contact-map-bg: #111;
+  --contact-font: #eee;
+  --contact-border: #333;
+  --inf: #7fcae6;
+  --tel: #644770;
+  --ele: #3e8344;
+  --pro: #32466b;
+  --logo-br: 100;
+}
+
 /* animations */
 @-webkit-keyframes move {
   0% {
@@ -53,7 +84,8 @@ body {
   width: 400vw;
   font-family: sans-serif;
   position: fixed;
-  background-image: url("../assets/img/tlo.png");
+  color: var(--font);
+  background: var(--bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -70,6 +102,8 @@ body {
 }
 .corner__logo {
   width: 100px;
+  -webkit-filter: brightness(var(--logo-br));
+          filter: brightness(var(--logo-br));
 }
 .corner__logo-img {
   width: 100%;
@@ -81,7 +115,8 @@ body {
 }
 .corner__button {
   background: transparent;
-  border: 2px solid #222;
+  border: 2px solid var(--border);
+  color: var(--border);
   margin: 1rem 0;
   outline: none;
   padding: 10px 15px;
@@ -97,8 +132,8 @@ body {
   }
 }
 .corner__button:hover {
-  background: #222;
-  color: #eee;
+  background: var(--border);
+  color: var(--bg);
 }
 @media (max-width: 512px) {
   .corner__button > span {
@@ -128,7 +163,7 @@ body {
   content: "";
   width: 4px;
   height: 50px;
-  background: #222;
+  background: var(--border);
   position: absolute;
 }
 @media (max-width: 512px) {
@@ -177,12 +212,12 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 2px solid #333;
-  background: #fff;
+  border: 2px solid var(--border);
+  background: var(--bg);
   cursor: pointer;
 }
 .nav__link--active {
-  background: #333;
+  background: var(--border);
 }
 
 .page {
@@ -217,7 +252,8 @@ body {
 }
 .page__button {
   background: transparent;
-  border: 2px solid #333;
+  border: 2px solid var(--border);
+  color: var(--border);
   margin: 1rem 0;
   outline: none;
   padding: 10px 30px;
@@ -234,8 +270,8 @@ body {
   }
 }
 .page__button:hover {
-  background: #222;
-  color: #eee;
+  background: var(--border);
+  color: var(--bg);
 }
 .page__navline-area {
   position: absolute;
@@ -259,7 +295,7 @@ body {
 .page__navline {
   height: 100%;
   width: 4px;
-  background: #222;
+  background: var(--border);
   position: relative;
   overflow: visible;
   display: -webkit-box;
@@ -276,35 +312,35 @@ body {
           justify-content: space-between;
 }
 .page__navline--inf {
-  background-color: #5ce;
+  background-color: var(--inf);
 }
 .page__navline--tele {
-  background-color: #536;
+  background-color: var(--tel);
 }
 .page__navline--ele {
-  background-color: #394;
+  background-color: var(--ele);
 }
 .page__navline--pro {
-  background-color: #236;
+  background-color: var(--pro);
 }
 .page__navline--inf > div {
-  border-color: #3ba9d1;
+  border-color: var(--inf);
 }
 .page__navline--tele > div {
-  border-color: #40224e;
+  border-color: var(--tel);
 }
 .page__navline--ele > div {
-  border-color: #21842a;
+  border-color: var(--ele);
 }
 .page__navline--pro > div {
-  border-color: #11254a;
+  border-color: var(--pro);
 }
 .page__nl-circle {
   width: 30px;
   height: 30px;
-  border: 4px solid #222;
+  border: 4px solid var(--border);
   border-radius: 50%;
-  background: #fff;
+  background: var(--bg);
   -webkit-transform: translateX(-47%);
           transform: translateX(-47%);
   cursor: pointer;
@@ -313,16 +349,16 @@ body {
   overflow: visible;
 }
 .page__nl-circle--active1 {
-  background: #3ba9d1;
+  background: var(--inf);
 }
 .page__nl-circle--active2 {
-  background: #40224e;
+  background: var(--tel);
 }
 .page__nl-circle--active3 {
-  background: #21842a;
+  background: var(--ele);
 }
 .page__nl-circle--active4 {
-  background: #11254a;
+  background: var(--pro);
 }
 .page__nl-circle > p {
   z-index: 10000;
@@ -345,7 +381,7 @@ body {
   width: 70vw;
   height: 80vh;
   overflow: scroll;
-  background-color: white;
+  background-color: var(--bg);
 }
 @media (max-width: 1152px) {
   .page__content {
@@ -366,7 +402,7 @@ body {
   }
 }
 .page__content--inf {
-  border-top: 2px #4cbae2 solid;
+  border-top: 2px var(--inf) solid;
 }
 @media (max-width: 512px) {
   .page__content--inf {
@@ -374,7 +410,7 @@ body {
   }
 }
 .page__content--tele {
-  border-top: 2px #51335f solid;
+  border-top: 2px var(--tel) solid;
 }
 @media (max-width: 512px) {
   .page__content--tele {
@@ -382,7 +418,7 @@ body {
   }
 }
 .page__content--ele {
-  border-top: 2px #32953b solid;
+  border-top: 2px var(--ele) solid;
 }
 @media (max-width: 512px) {
   .page__content--ele {
@@ -390,7 +426,7 @@ body {
   }
 }
 .page__content--pro {
-  border-top: 2px #22365b solid;
+  border-top: 2px var(--pro) solid;
 }
 @media (max-width: 512px) {
   .page__content--pro {
@@ -407,7 +443,7 @@ body {
   font-variant: small-caps;
   line-height: 0.1em;
   overflow: visible;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid var(--font);
 }
 @media (max-width: 1152px) {
   .page__article > h3 {
@@ -430,23 +466,23 @@ body {
   }
 }
 .page__article > h3 > span {
-  background-color: white;
+  background-color: var(--bg);
 }
 .page__article--inf > h3 {
-  border-bottom-color: #4cbae2;
-  color: #4cbae2;
+  border-bottom-color: var(--inf);
+  color: var(--inf);
 }
 .page__article--tele > h3 {
-  border-bottom-color: #51335f;
-  color: #51335f;
+  border-bottom-color: var(--tel);
+  color: var(--tel);
 }
 .page__article--ele > h3 {
-  border-bottom-color: #32953b;
-  color: #32953b;
+  border-bottom-color: var(--ele);
+  color: var(--ele);
 }
 .page__article--pro > h3 {
-  border-bottom-color: #22365b;
-  color: #22365b;
+  border-bottom-color: var(--pro);
+  color: var(--pro);
 }
 .page__article > p {
   font-size: 20px;
@@ -496,8 +532,8 @@ body {
 .contact-overlay {
   width: 100vw;
   height: 100vh;
-  background: rgba(20, 20, 20, 0.98);
-  color: #eee;
+  background: var(--contact-bg);
+  color: var(--contact-font);
   position: fixed;
   z-index: 150;
   bottom: 100vh;
@@ -539,7 +575,7 @@ body {
   content: "";
   width: 4px;
   height: 50px;
-  background: #eee;
+  background: var(--contact-font);
   position: absolute;
 }
 @media (max-width: 896px) {
@@ -570,7 +606,7 @@ body {
 }
 .contact-overlay__subtitle {
   font-size: 20px;
-  border-bottom: 1px dotted rgba(238, 238, 238, 0.3);
+  border-bottom: 2px solid var(--contact-border);
   margin: 0 3vw;
   padding-bottom: 1.5rem;
   padding-left: 10vw;
@@ -673,7 +709,7 @@ body {
 }
 .contact-overlay__socials > a {
   text-decoration: none;
-  color: #fff;
+  color: var(--contact-font);
   display: block;
   margin: 20px;
   position: relative;
@@ -716,7 +752,7 @@ body {
   display: block;
   width: 6px;
   height: 25px;
-  background: #eee;
+  background: var(--contact-font);
 }
 .contact-overlay__map-button > span::before {
   -webkit-transform: translate(-50%) rotateZ(45deg) translateX(-10px);
@@ -747,7 +783,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    background: #111;
+    background: var(--contact-map-bg);
     position: fixed;
     z-index: 300;
     left: 0;
@@ -799,7 +835,7 @@ body {
   display: block;
   width: 6px;
   height: 25px;
-  background: #eee;
+  background: var(--contact-font);
 }
 .contact-overlay__map > span::before {
   -webkit-transform: translate(-50%) rotateZ(-45deg) translateX(-10px);
@@ -809,3 +845,58 @@ body {
   -webkit-transform: translate(-50%) rotateZ(45deg) translateX(10px);
           transform: translate(-50%) rotateZ(45deg) translateX(10px);
 }
+
+.switch {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1.5rem;
+  z-index: 100;
+  margin: 15px 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--font);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 1rem;
+  z-index: 0;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  left: 0.05rem;
+  bottom: 0.05rem;
+  background-color: var(--bg);
+  border-radius: 50%;
+  z-index: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--font);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1rem);
+  transform: translateX(1rem);
+}
+/*# sourceMappingURL=main.css.map */

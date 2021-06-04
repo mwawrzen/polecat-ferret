@@ -6,6 +6,37 @@ $md: 896px
 $lg: 1152px
 $xl: 1280px
 
+/* colors */
+
+.light
+
+    --font: #000
+    --bg: #fff
+    --border: #333
+    --contact-bg: rgba(20, 20, 20, .98)
+    --contact-map-bg: #111
+    --contact-font: #eee
+    --contact-border: #333
+    --inf: #3ba9d1
+    --tel: #40224e
+    --ele: #21842a
+    --pro: #11254a
+    --logo-br: 1
+
+.dark
+    --font: #fff
+    --bg: #161616
+    --border: #aaa
+    --contact-bg: rgba(20, 20, 20, .98)
+    --contact-map-bg: #111
+    --contact-font: #eee
+    --contact-border: #333
+    --inf: #7fcae6
+    --tel: #644770
+    --ele: #3e8344
+    --pro: #32466b
+    --logo-br: 100
+
 /* animations */
 
 @keyframes move
@@ -34,7 +65,9 @@ body
     width: 400vw
     font-family: sans-serif
     position: fixed
-    background-image: url("../assets/img/tlo.png")
+    color: var(--font)
+    background: var(--bg)
+    //background-image: url("../assets/img/tlo.png")
     background-repeat: no-repeat
     background-size: cover
     background-attachment: fixed
@@ -50,6 +83,7 @@ body
 
     &__logo
         width: 100px
+        filter: brightness(var(--logo-br))
 
     &__logo-img
         width: 100%
@@ -58,7 +92,8 @@ body
 
     &__button
         background: transparent
-        border: 2px solid #222
+        border: 2px solid var(--border)
+        color: var(--border)
         margin: 1rem 0
         outline: none
         padding: 10px 15px
@@ -70,8 +105,8 @@ body
             margin-left: 3px
 
         &:hover
-            background: #222
-            color: #eee
+            background: var(--border)
+            color: var(--bg)
 
         & > span
             @media (max-width: $xs)
@@ -99,7 +134,7 @@ body
             content: ''
             width: 4px
             height: 50px
-            background: #222
+            background: var(--border)
             position: absolute
             @media (max-width: $xs)
                 height: 30px
@@ -136,12 +171,12 @@ body
         width: 25px
         height: 25px
         border-radius: 50%
-        border: 2px solid #333
-        background: #fff
+        border: 2px solid var(--border)
+        background: var(--bg)
         cursor: pointer
 
         &--active
-            background: #333
+            background: var(--border)
 
 .page
     width: 100vw
@@ -168,7 +203,8 @@ body
 
     &__button
         background: transparent
-        border: 2px solid #333
+        border: 2px solid var(--border)
+        color: var(--border)
         margin: 1rem 0
         outline: none
         padding: 10px 30px
@@ -181,8 +217,8 @@ body
             font-size: 16px
 
         &:hover
-            background: #222
-            color: #eee
+            background: var(--border)
+            color: var(--bg)
 
     &__navline-area
         position: absolute
@@ -199,7 +235,7 @@ body
     &__navline
         height: 100%
         width: 4px
-        background: #222
+        background: var(--border)
         position: relative
         overflow: visible
         display: flex
@@ -209,51 +245,51 @@ body
         justify-content: space-between
 
         &--inf
-            background-color: #5ce
+            background-color: var(--inf)
 
         &--tele
-            background-color: #536
+            background-color: var(--tel)
 
         &--ele
-            background-color: #394
+            background-color: var(--ele)
 
         &--pro
-            background-color: #236
+            background-color: var(--pro)
 
         &--inf > div
-            border-color: #3ba9d1
+            border-color: var(--inf)
 
         &--tele > div
-            border-color: #40224e
+            border-color: var(--tel)
 
         &--ele > div
-            border-color: #21842a
+            border-color: var(--ele)
 
         &--pro > div
-            border-color: #11254a
+            border-color: var(--pro)
 
     &__nl-circle
         width: 30px
         height: 30px
-        border: 4px solid #222
+        border: 4px solid var(--border)
         border-radius: 50%
-        background: #fff
+        background: var(--bg)
         transform: translateX(-47%)
         cursor: pointer
         transition: .3s
         overflow: visible
 
         &--active1
-            background: #3ba9d1
+            background: var(--inf)
 
         &--active2
-            background: #40224e
+            background: var(--tel)
 
         &--active3
-            background: #21842a
+            background: var(--ele)
 
         &--active4
-            background: #11254a
+            background: var(--pro)
 
         & > p
             z-index: 10000
@@ -275,7 +311,7 @@ body
         width: 70vw
         height: 80vh
         overflow: scroll
-        background-color: white
+        background-color: var(--bg)
         @media (max-width: $lg)
             left: 15vw
             padding: 1rem
@@ -287,22 +323,22 @@ body
             left: 0
 
         &--inf
-            border-top: 2px #4cbae2 solid
+            border-top: 2px var(--inf) solid
             @media (max-width: $xs)
                 border-top: none
 
         &--tele
-            border-top: 2px #51335f solid
+            border-top: 2px var(--tel) solid
             @media (max-width: $xs)
                 border-top: none
 
         &--ele
-            border-top: 2px #32953b solid
+            border-top: 2px var(--ele) solid
             @media (max-width: $xs)
                 border-top: none
 
         &--pro
-            border-top: 2px #22365b solid
+            border-top: 2px var(--pro) solid
             @media (max-width: $xs)
                 border-top: none
 
@@ -316,7 +352,7 @@ body
             font-variant: small-caps
             line-height: .1em
             overflow: visible
-            border-bottom: 1px solid #000
+            border-bottom: 1px solid var(--font)
             @media (max-width: $lg)
                 padding: 0
                 font-size: 20px
@@ -330,24 +366,23 @@ body
                 font-size: 16px
 
             & > span
-                background-color: white
-
+                background-color: var(--bg)
 
         &--inf > h3
-            border-bottom-color: #4cbae2
-            color: #4cbae2
+            border-bottom-color: var(--inf)
+            color: var(--inf)
 
         &--tele > h3
-            border-bottom-color: #51335f
-            color: #51335f
+            border-bottom-color: var(--tel)
+            color: var(--tel)
 
         &--ele > h3
-            border-bottom-color: #32953b
-            color: #32953b
+            border-bottom-color: var(--ele)
+            color: var(--ele)
 
         &--pro > h3
-            border-bottom-color: #22365b
-            color: #22365b
+            border-bottom-color: var(--pro)
+            color: var(--pro)
 
         & > p
             font-size: 20px
@@ -382,8 +417,8 @@ body
 .contact-overlay
     width: 100vw
     height: 100vh
-    background: rgba(20, 20, 20, .98)
-    color: #eee
+    background: var(--contact-bg)
+    color: var(--contact-font)
     position: fixed
     z-index: 150
     bottom: 100vh
@@ -416,7 +451,7 @@ body
             content: ''
             width: 4px
             height: 50px
-            background: #eee
+            background: var(--contact-font)
             position: absolute
             @media (max-width: $md)
                 height: 30px
@@ -439,7 +474,7 @@ body
 
     &__subtitle
         font-size: 20px
-        border-bottom: 1px dotted rgba(238, 238, 238, .3)
+        border-bottom: 2px solid var(--contact-border)
         margin: 0 3vw
         padding-bottom: 1.5rem
         padding-left: 10vw
@@ -496,7 +531,7 @@ body
 
         & > a
             text-decoration: none
-            color: #fff
+            color: var(--contact-font)
             display: block
             margin: 20px
             position: relative
@@ -529,7 +564,7 @@ body
                 display: block
                 width: 6px
                 height: 25px
-                background: #eee
+                background: var(--contact-font)
 
             &::before
                 transform: translate(-50%) rotateZ(45deg) translateX(-10px)
@@ -550,7 +585,7 @@ body
         @media (max-width: $md)
             display: flex
             flex-flow: column
-            background: #111
+            background: var(--contact-map-bg)
             position: fixed
             z-index: 300
             left: 0
@@ -591,10 +626,59 @@ body
                 display: block
                 width: 6px
                 height: 25px
-                background: #eee
+                background: var(--contact-font)
 
             &::before
                 transform: translate(-50%) rotateZ(-45deg) translateX(-10px)
 
             &::after
                 transform: translate(-50%) rotateZ(45deg) translateX(10px)
+
+.switch
+    position: fixed
+    top: 0
+    right: 0
+    display: inline-block
+    width: 2.5rem
+    height: 1.5rem
+    z-index: 100
+    margin: 15px 10px
+
+.switch input
+    opacity: 0
+    width: 0
+    height: 0
+
+.slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: var(--font)
+    -webkit-transition: 0.4s
+    transition: 0.4s
+    border-radius: 1rem
+    z-index: 0
+
+.slider:before
+    position: absolute
+    content: ""
+    height: 1.4rem
+    width: 1.4rem
+    left: 0.05rem
+    bottom: 0.05rem
+    background-color: var(--bg)
+    border-radius: 50%
+    z-index: 0
+    -webkit-transition: 0.4s
+    transition: 0.4s
+
+input:checked+.slider
+    background-color: var(--font)
+
+input:checked+.slider:before
+    -webkit-transform: translateX(1rem)
+    -ms-transform: translateX(1rem)
+    transform: translateX(1rem)

@@ -22,6 +22,7 @@ function openLightbox(value) {
     anim(lightboxContext, { bottom: 0 }, .4);
     anim(lightboxCloseButton, { display: 'grid' }, .3);
     tlAnim(gsap.timeline(), lightboxCloseButton, { opacity: 1 });
+    anim(pageCornerCloseButton, { left: '-70px' }, .2);
 
     lightboxImage.src = getImage(idGallery, idImg).src;
 }
@@ -55,6 +56,7 @@ function closeLightbox(){
     anim(lightboxContext, { bottom: '-100vh' }, .3);
     anim(lightboxCloseButton, { opacity: 0 }, .2);
     tlAnim(gsap.timeline(), lightboxCloseButton, { display: 'none' });
+    anim(pageCornerCloseButton, { left: '24px' }, .2);
 }
 
 function setup() {

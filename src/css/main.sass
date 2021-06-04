@@ -6,6 +6,26 @@ $md: 896px
 $lg: 1152px
 $xl: 1280px
 
+/* colors */
+
+.dark
+
+.ligth
+    --font: #000
+    --bg: #fff
+    --border: #333
+    --contact-bg: rgba(20, 20, 20, .98)
+    --contact-map-bg: #111
+    --contact-font: #eee
+    --inf: #3ba9d1
+    --inf-dark: #5ce
+    --tel: #40224e
+    --tel-dark: #536
+    --ele: #21842a
+    --ele-dark: #394
+    --pro: #11254a
+    --pro-dark: #236
+
 /* animations */
 
 @keyframes move
@@ -29,6 +49,7 @@ $xl: 1280px
         display: none
 
 body
+    color: var(--font)
     height: 100vh
     display: flex
     width: 400vw
@@ -82,7 +103,7 @@ body
             content: ''
             width: 4px
             height: 50px
-            background: #222
+            background: var(--font)
             position: absolute
             @media (max-width: $xs)
                 height: 30px
@@ -119,12 +140,12 @@ body
         width: 25px
         height: 25px
         border-radius: 50%
-        border: 2px solid #333
-        background: #fff
+        border: 2px solid var(--border)
+        background: var(--bg)
         cursor: pointer
 
         &--active
-            background: #333
+            background: var(--border)
 
 .page
     width: 100vw
@@ -168,7 +189,7 @@ body
     &__navline
         height: 100%
         width: 4px
-        background: #222
+        background: var(--border)
         position: relative
         overflow: visible
         display: flex
@@ -178,51 +199,51 @@ body
         justify-content: space-between
 
         &--inf
-            background-color: #5ce
+            background-color: var(--inf-dark)
 
         &--tele
-            background-color: #536
+            background-color: var(--tel-dark)
 
         &--ele
-            background-color: #394
+            background-color: var(--ele-dark)
 
         &--pro
-            background-color: #236
+            background-color: var(--pro-dark)
 
         &--inf > div
-            border-color: #3ba9d1
+            border-color: var(--inf)
 
         &--tele > div
-            border-color: #40224e
+            border-color: var(--tel)
 
         &--ele > div
-            border-color: #21842a
+            border-color: var(--tel)
 
         &--pro > div
-            border-color: #11254a
+            border-color: var(--pro)
 
     &__nl-circle
         width: 30px
         height: 30px
-        border: 4px solid #222
+        border: 4px solid var(--border)
         border-radius: 50%
-        background: #fff
+        background: var(--bg)
         transform: translateX(-47%)
         cursor: pointer
         transition: .3s
         overflow: visible
 
         &--active1
-            background: #3ba9d1
+            background: var(--inf)
 
         &--active2
-            background: #40224e
+            background: var(--tel)
 
         &--active3
-            background: #21842a
+            background: var(--tel)
 
         &--active4
-            background: #11254a
+            background: var(--pro)
 
         & > p
             z-index: 10000
@@ -300,7 +321,6 @@ body
             & > span
                 background-color: white
 
-
         &--inf > h1
             border-bottom-color: #4cbae2
             color: #4cbae2
@@ -350,8 +370,8 @@ body
 .contact-overlay
     width: 100vw
     height: 100vh
-    background: rgba(20, 20, 20, .98)
-    color: #eee
+    background: var(--contact-bg)
+    color: var(--contact-font)
     position: fixed
     z-index: 150
     bottom: 100vh
@@ -384,7 +404,7 @@ body
             content: ''
             width: 4px
             height: 50px
-            background: #eee
+            background: var(--contact-font)
             position: absolute
             @media (max-width: $md)
                 height: 30px
@@ -407,7 +427,7 @@ body
 
     &__subtitle
         font-size: 20px
-        border-bottom: 1px dotted rgba(238, 238, 238, .3)
+        border-bottom: 1px solid var(--border)
         margin: 0 3vw
         padding-bottom: 1.5rem
         padding-left: 10vw
@@ -461,7 +481,7 @@ body
 
         & > a
             text-decoration: none
-            color: #fff
+            color: var(--contact-font)
             display: block
             margin: 20px
             position: relative
@@ -494,7 +514,7 @@ body
                 display: block
                 width: 6px
                 height: 25px
-                background: #eee
+                background: var(--contact-font)
 
             &::before
                 transform: translate(-50%) rotateZ(45deg) translateX(-10px)
@@ -515,7 +535,7 @@ body
         @media (max-width: $md)
             display: flex
             flex-flow: column
-            background: #111
+            background: var(--contact-map-bg)
             position: fixed
             z-index: 300
             left: 0
@@ -556,7 +576,7 @@ body
                 display: block
                 width: 6px
                 height: 25px
-                background: #eee
+                background: var(--contact-font)
 
             &::before
                 transform: translate(-50%) rotateZ(-45deg) translateX(-10px)

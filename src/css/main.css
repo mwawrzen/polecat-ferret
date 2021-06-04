@@ -1,4 +1,22 @@
 /* rwd */
+/* colors */
+.ligth {
+  --font: #000;
+  --bg: #fff;
+  --border: #333;
+  --contact-bg: rgba(20, 20, 20, .98);
+  --contact-map-bg: #111;
+  --contact-font: #eee;
+  --inf: #3ba9d1;
+  --inf-dark: #5ce;
+  --tel: #40224e;
+  --tel-dark: #536;
+  --ele: #21842a;
+  --ele-dark: #394;
+  --pro: #11254a;
+  --pro-dark: #236;
+}
+
 /* animations */
 @-webkit-keyframes move {
   0% {
@@ -46,6 +64,7 @@
 }
 
 body {
+  color: var(--font);
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,7 +125,7 @@ body {
   content: "";
   width: 4px;
   height: 50px;
-  background: #222;
+  background: var(--font);
   position: absolute;
 }
 @media (max-width: 512px) {
@@ -155,12 +174,12 @@ body {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  border: 2px solid #333;
-  background: #fff;
+  border: 2px solid var(--border);
+  background: var(--bg);
   cursor: pointer;
 }
 .nav__link--active {
-  background: #333;
+  background: var(--border);
 }
 
 .page {
@@ -219,7 +238,7 @@ body {
 .page__navline {
   height: 100%;
   width: 4px;
-  background: #222;
+  background: var(--border);
   position: relative;
   overflow: visible;
   display: -webkit-box;
@@ -236,35 +255,35 @@ body {
           justify-content: space-between;
 }
 .page__navline--inf {
-  background-color: #5ce;
+  background-color: var(--inf-dark);
 }
 .page__navline--tele {
-  background-color: #536;
+  background-color: var(--tel-dark);
 }
 .page__navline--ele {
-  background-color: #394;
+  background-color: var(--ele-dark);
 }
 .page__navline--pro {
-  background-color: #236;
+  background-color: var(--pro-dark);
 }
 .page__navline--inf > div {
-  border-color: #3ba9d1;
+  border-color: var(--inf);
 }
 .page__navline--tele > div {
-  border-color: #40224e;
+  border-color: var(--tel);
 }
 .page__navline--ele > div {
-  border-color: #21842a;
+  border-color: var(--tel);
 }
 .page__navline--pro > div {
-  border-color: #11254a;
+  border-color: var(--pro);
 }
 .page__nl-circle {
   width: 30px;
   height: 30px;
-  border: 4px solid #222;
+  border: 4px solid var(--border);
   border-radius: 50%;
-  background: #fff;
+  background: var(--bg);
   -webkit-transform: translateX(-47%);
           transform: translateX(-47%);
   cursor: pointer;
@@ -273,16 +292,16 @@ body {
   overflow: visible;
 }
 .page__nl-circle--active1 {
-  background: #3ba9d1;
+  background: var(--inf);
 }
 .page__nl-circle--active2 {
-  background: #40224e;
+  background: var(--tel);
 }
 .page__nl-circle--active3 {
-  background: #21842a;
+  background: var(--tel);
 }
 .page__nl-circle--active4 {
-  background: #11254a;
+  background: var(--pro);
 }
 .page__nl-circle > p {
   z-index: 10000;
@@ -455,8 +474,8 @@ body {
 .contact-overlay {
   width: 100vw;
   height: 100vh;
-  background: rgba(20, 20, 20, 0.98);
-  color: #eee;
+  background: var(--contact-bg);
+  color: var(--contact-font);
   position: fixed;
   z-index: 150;
   bottom: 100vh;
@@ -498,7 +517,7 @@ body {
   content: "";
   width: 4px;
   height: 50px;
-  background: #eee;
+  background: var(--contact-font);
   position: absolute;
 }
 @media (max-width: 896px) {
@@ -529,7 +548,7 @@ body {
 }
 .contact-overlay__subtitle {
   font-size: 20px;
-  border-bottom: 1px dotted rgba(238, 238, 238, 0.3);
+  border-bottom: 1px solid var(--border);
   margin: 0 3vw;
   padding-bottom: 1.5rem;
   padding-left: 10vw;
@@ -626,7 +645,7 @@ body {
 }
 .contact-overlay__socials > a {
   text-decoration: none;
-  color: #fff;
+  color: var(--contact-font);
   display: block;
   margin: 20px;
   position: relative;
@@ -669,7 +688,7 @@ body {
   display: block;
   width: 6px;
   height: 25px;
-  background: #eee;
+  background: var(--contact-font);
 }
 .contact-overlay__map-button > span::before {
   -webkit-transform: translate(-50%) rotateZ(45deg) translateX(-10px);
@@ -700,7 +719,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
-    background: #111;
+    background: var(--contact-map-bg);
     position: fixed;
     z-index: 300;
     left: 0;
@@ -752,7 +771,7 @@ body {
   display: block;
   width: 6px;
   height: 25px;
-  background: #eee;
+  background: var(--contact-font);
 }
 .contact-overlay__map > span::before {
   -webkit-transform: translate(-50%) rotateZ(-45deg) translateX(-10px);
@@ -762,3 +781,4 @@ body {
   -webkit-transform: translate(-50%) rotateZ(45deg) translateX(10px);
           transform: translate(-50%) rotateZ(45deg) translateX(10px);
 }
+/*# sourceMappingURL=main.css.map */

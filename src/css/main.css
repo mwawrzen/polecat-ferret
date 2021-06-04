@@ -525,7 +525,10 @@ body {
 }
 .page__article img {
   width: 30%;
-  border-radius: 20px;
+  border-radius: 15px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 .page__article img:hover {
   -webkit-transform: scale(1.1);

@@ -12,7 +12,7 @@ const navMenu = document.querySelector('.nav__menu');
 const navButtons = document.querySelectorAll('.nav__link');
 
 const pageCorner = document.querySelector('.corner');
-const pageCornerCloseButton = document.querySelector('.corner__close');
+const pageCornerCloseButton = document.querySelector('.close-button');
 const logo = document.querySelector('.corner__logo');
 const contactButton = document.querySelector('.corner__button');
 

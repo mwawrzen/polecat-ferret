@@ -92,6 +92,46 @@ body {
   background-position: right bottom;
 }
 
+.close-button {
+  position: fixed;
+  z-index: 200;
+  top: 12px;
+  left: -70px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 5px;
+}
+.close-button:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+.close-button::after, .close-button::before {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 50px;
+  background: var(--border);
+  position: absolute;
+}
+@media (max-width: 512px) {
+  .close-button::after, .close-button::before {
+    height: 30px;
+  }
+}
+.close-button::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.close-button::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .corner {
   position: fixed;
   z-index: 100;
@@ -139,45 +179,6 @@ body {
   .corner__button > span {
     display: none;
   }
-}
-.corner__close {
-  position: absolute;
-  z-index: 200;
-  top: -60px;
-  left: -70px;
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  padding: 5px;
-}
-.corner__close:hover {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  cursor: pointer;
-}
-.corner__close::after, .corner__close::before {
-  display: block;
-  content: "";
-  width: 4px;
-  height: 50px;
-  background: var(--border);
-  position: absolute;
-}
-@media (max-width: 512px) {
-  .corner__close::after, .corner__close::before {
-    height: 30px;
-  }
-}
-.corner__close::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.corner__close::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 .theme-button {

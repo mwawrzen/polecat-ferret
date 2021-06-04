@@ -16,7 +16,7 @@ const readMoreFunction = () => {
         anim(pageHeader[c], { fontSize: '4vh' });
         anim(pageDescription[c], { opacity: 0, display: 'none' });
         anim(pageReadMoreButton[c], { opacity: 0 }, .2);
-        anim(navMenu, { opacity: 0 });
+        anim(navMenu, { opacity: 0, display: 'none' });
         anim(logo, { opacity: 0 }, 0);
         anim(contactButton, { opacity: 0 }, 0);
         anim(themeButton, { opacity: 0 }, 0);
@@ -43,7 +43,7 @@ const readMoreFunction = () => {
         }
         anim(pageDescription[c], { opacity: 1 });
         anim(pageReadMoreButton[c], { opacity: 1 });
-        anim(navMenu, { opacity: 1 });
+        anim(navMenu, { opacity: 1, display: 'flex' });
         anim(logo, { opacity: 1 }, .2);
         anim(contactButton, { opacity: 1 }, .2);
         anim(themeButton, { opacity: 1 }, .2);

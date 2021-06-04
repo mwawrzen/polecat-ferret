@@ -1,0 +1,92 @@
+.lightbox {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+  background: rgba(20, 20, 20, 0.98);
+  z-index: 150;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.lightbox__close {
+  position: fixed;
+  z-index: 200;
+  top: 12px;
+  left: 24px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  opacity: 0;
+  place-items: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.lightbox__close:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+}
+.lightbox__close::after, .lightbox__close::before {
+  display: block;
+  content: "";
+  width: 4px;
+  height: 50px;
+  background: #eee;
+  position: absolute;
+}
+.lightbox__close::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.lightbox__close::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.lightbox__img {
+  width: 70%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.lightbox__img--img {
+  width: 100%;
+}
+.lightbox__img__nav {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: #eee;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.lightbox__img__nav:hover {
+  background-color: #eee;
+  color: #222;
+}
+.lightbox__img__nav--prev {
+  left: -6rem;
+}
+.lightbox__img__nav--next {
+  right: -6rem;
+}

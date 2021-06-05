@@ -13,12 +13,13 @@ function getImage(idGallery, idImage) {
     return imgGalleries[idGallery].querySelectorAll("img")[idImage];
 }
 
+
 function activateNav() {
-    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "grid" : "none"
+    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "block" : "none"
     let images = document
         .querySelectorAll(".lightbox__section")[currentGallery]
         .querySelectorAll("img");
-    lightboxNavNext.style.display = currentImage + 1 < images.length ? "grid" : "none"
+    lightboxNavNext.style.display = currentImage + 1 < images.length ? "block" : "none"
 }
 
 

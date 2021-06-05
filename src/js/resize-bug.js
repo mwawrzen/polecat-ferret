@@ -16,11 +16,11 @@ window.addEventListener('resize', () => {
     }
 
     if (isReadMore) {
-        pageHeader[c].style.fontSize = '4vh';
+        pageHeader.forEach(page => page.style.fontSize = '4vh');
     } else {
         if (window.innerWidth <= breakpoints.sm)
-            pageHeader[c].style.fontSize = '40px';
+            pageHeader.forEach(page => page.style.fontSize = '40px');
         else
-            pageHeader[c].style.fontSize = '80px';
+            pageHeader.forEach(page => page.style.fontSize = '80px');
     }
 });

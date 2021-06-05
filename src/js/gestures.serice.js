@@ -7,13 +7,15 @@ window.addEventListener('touchstart', e => {
 
 window.addEventListener('touchend', e => {
 
-    const endPosition = e.changedTouches[0].screenX;
-    if (endPosition > position) {
-        if (c <= pagesNumber && c > 0)
-            c--;
-    } else if (endPosition < position) {
-        if (c < pagesNumber)
-            c++;
+    if (horizontal) {
+        const endPosition = e.changedTouches[0].screenX;
+        if (endPosition > position) {
+            if (c <= pagesNumber && c > 0)
+                c--;
+        } else if (endPosition < position) {
+            if (c < pagesNumber)
+                c++;
+        }
+        navTo(c);
     }
-    navTo(c);
 });

@@ -8,8 +8,7 @@
     <title>Zespół Szkół Łączności</title>
     <link rel="shortcut icon" href="#">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/lightbox.css">
@@ -27,13 +26,17 @@
         </button>
     </aside>
     <label class="switch">
-        <input type="checkbox" onclick="mode()" />
+        <input type="checkbox">
         <span class="slider"></span>
     </label>
     <nav class="nav">
         <ul class="nav__menu">
             <li class="nav__item">
-                <button type="button" class="nav__link nav__link--active" onclick="navTo(0)"></button>
+                <button
+                    type="button"
+                    class="nav__link nav__link--active"
+                    onclick="navTo(0)">
+                </button>
             </li>
             <li class="nav__item">
                 <button type="button" class="nav__link" onclick="navTo(1)"></button>
@@ -49,13 +52,10 @@
     <div class="page">
         <div class="page__container">
             <h2 class="page__title">Technik<br>informatyk</h2>
-            <p class="page__subtitle">Na tym kierunku nauczysz się programowania, tworzenia stron internetowych,
-                zarządzania
-                systemem operacyjnym, podstaw elektroniki, składania komputera, tworzenia baz danych, oraz zarządzania
-                serwerem.</p>
-            <button type="button" class="page__button" onclick="readMoreFunction()">
-                czytaj więcej
-            </button>
+            <p class="page__subtitle">
+                oprogramowanie, sieci, podzespoły komputerowe
+            </p>
+            <button type="button" class="page__button"></button>
         </div>
         <aside class="page__navline-area">
             <div class="page__navline page__navline--inf">
@@ -85,78 +85,98 @@
         <div class="page__content page__content--inf">
             <article class="page__article page__article--inf sk">
                 <h3><span>Sieci Komputerowe</span></h3>
-                <p> Na tym przedmiocie nauczysz się obliczania, oraz dzielenia sieci na mniejsze podsieci. Nauczysz się
-                    także jak dane są przesyłane przez sieć, skręcania RJ-45, oraz budowę modelu internetowego, a także
-                    rodzaje kabli.</p>
+                <p>
+                    Nauka o sieciach komputerowych jest niezbędna do profesjonalnego wykonywania zawodu informatyka. Dowiesz się jak w sieci przesyłane są dane, jakie wykorzystujemy protokoły komunikacji, jak powinniśmy łączyć urządzenia sieciowe. Ponadto, nauczysz się jak zarobić kabel sieciowy oraz pokażemy Ci jak spawa się światłowody.
+                </p>
                 <div class="lightbox__section">
-                    <img src="assets/img/read_more/informatyk/sk1.PNG" alt="Sieci Komputerowe obrazek"/>
+                    <img
+                        src="assets/img/content/informatyk/sieci-komputerowe.png"
+                        alt="Sieci Komputerowe">
                 </div>
             </article>
             <article class="page__article page__article--inf so">
                 <h3><span>Systemy Operacyjne</span></h3>
-                <p>Na tym przedmiocie nauczysz się instalacji różnych systemów operacyjnych, operowania maszynami
-                    wirtualnymi, z których będziesz korzystał na każdej lekcji. Nauczysz się korzystania z konsoli
-                    komend
-                    znaną jako CMD. Na lekcji będziesz tworzył użytkowników, grupy oraz zarządzał ustawieniami dostępu
-                    do
-                    plików i folderów.</p>
+                <p>
+                    Systemy operacyjne to jeden z najważniejszych przedmiotów dla przyszłego technika informatyka. Niesprawne poruszanie się po systemie Windows czy Linux lub nawet jego brak skutkują znacznym obniżeniem poziomu Twojej przyszłej pracy, ale nie martw się :)
+                </p>
+                <p>
+                    Na przedmiocie Systemy Operacyjne nauczysz się sprawnej obsługi różnych systemów, począwszy od ich instalacji na maszynie wirtualnej, która będzie towarzyszyć Ci przez cały okres nauki w Technikum Łączności.
+                </p>
                 <div class="lightbox__section">
-                    <img src="assets/img/read_more/informatyk/db1.PNG" alt="Sieci Komputerowe obrazek"/>
-                    <img src="assets/img/read_more/informatyk/db2.PNG" alt="Sieci Komputerowe obrazek"/>
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych.png"
+                        alt="Systemy Operacyjne">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych-2.png"
+                        alt="Systemy operacyjne">
                 </div>
             </article>
             <article class="page__article page__article--inf sso">
                 <h3><span>Sieciowe Systemy Operacyjne</span></h3>
-                <p> Na tym przedmiocie nauczysz się optymalizacji systemu operacyjnego oraz dalszego użytkowania maszyn
-                    wirtualnych. Nauczysz się także zarządzania serwerem, a także tworzenia użytkowników oraz serwerów
-                    FTP i
-                    WWW.</p>
-                    <div class="lightbox__section">
-                        <img src="assets/img/read_more/informatyk/db1.PNG" alt="Sieci Komputerowe obrazek"/>
-                        <img src="assets/img/read_more/informatyk/db2.PNG" alt="Sieci Komputerowe obrazek"/>
-                    </div>
+                <p>
+                    Na Sieciowych Systemach Operacyjnych nauczysz się zarządzania serwerem za pomocą specjalnego serwerowego systemu operacyjnego. Stworzysz własny serwer WWW i serwer plików. Poznasz także przeróżne usługi, jakie oferują Ci systemu Windows Server i Linux Server. Będziesz umiał je skonfigurować i wykorzystać.
+                </p>
+                <div class="lightbox__section">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych.png"
+                        alt="Sieciowe Systemy Operacyjne">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych-2.png"
+                        alt="Sieciowe Systemy operacyjne">
+                </div>
             </article>
             <article class="page__article page__article--inf utk">
                 <h3><span>Urządzenia Techniki Komputerowej</span></h3>
-                <p> Na tym przedmiocie nauczysz się podstaw elektroniki, będziesz obliczał oporność łącząc w różny
-                    sposób
-                    rezystory. Nauczysz się także lutowania oraz składania komputerów. Będziesz czytał specyfikacje
-                    podzespołów komputerowych oraz poznawał właściwości poszczególnych oznaczeń i skrótów. Poznasz
-                    różnice
-                    pomiędzy poszczególnymi matrycami i drukarkami.
+                <p>
+                    Urządzenia Techniki Komputerowej to zdecydowanie najbardziej zróżnicowany przedmiot zawodowy. Poznasz tutaj podstawy elektroniki i elektrotechniki. Poznasz także dobrze budowę komputera oraz urządzeń peryferyjnych. Przeanalizujesz dogłębnie budowę każdego podzespołu. Nauczysz się także dobierać komponenty, aby móc samemu złożyć komputer.
                 </p>
                 <div class="lightbox__section">
-                    <img src="assets/img/read_more/informatyk/db1.PNG" alt="Sieci Komputerowe obrazek"/>
-                    <img src="assets/img/read_more/informatyk/db2.PNG" alt="Sieci Komputerowe obrazek"/>
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych.png"
+                        alt="Urządzenia Techniki Komputerowej">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych-2.png"
+                        alt="Urządzenia Techniki Komputerowej">
                 </div>
             </article>
             <article class="page__article page__article--inf bd">
                 <h3><span>Bazy Danych</span></h3>
-                <p> Na tym przedmiocie nauczysz się jak stworzyć bazę danych w MS Access i MySQL oraz jak nią zarządzać.
-                    Będziesz także pisał wiele zapytań w języku SQL.</p>
+                <p>
+                    Na Bazach Danych nauczysz się projektować i tworzyć własną relacyjną bazę danych w Microsoft Access i MySQL.
+                </p>
                 <div class="lightbox__section">
-                    <img src="assets/img/read_more/informatyk/db1.PNG" alt="Sieci Komputerowe obrazek"/>
-                    <img src="assets/img/read_more/informatyk/db2.PNG" alt="Sieci Komputerowe obrazek"/>
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych.png"
+                        alt="Bazy Danych">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych-2.png"
+                        alt="Bazy Danych">
                 </div>
             </article>
             <article class="page__article page__article--inf tssi">
-                <h3><span>Tworzenie Statycznych Stron Internatywych</span></h3>
-                <p> Na tym przedmiocie nauczysz się tworzenia stron internetowych. W skrócie będzie omawiane działanie
+                <h3><span>Tworzenie Statycznych Stron Internetowych</span></h3>
+                <p>
+                    Na tym przedmiocie nauczysz się tworzenia stron internetowych. W skrócie będzie omawiane działanie
                     Bootstrapa. Nauczysz się także grafiki komputerowej w takich programach jak GIMP, PhotoShop i
                     Inkscape.
-                    Na tych lekcjach będzie wiele ciekawych i przydatnych projektów.</p>
-                    <div class="lightbox__section">
-                        <img src="assets/img/read_more/informatyk/db1.PNG" alt="Sieci Komputerowe obrazek"/>
-                        <img src="assets/img/read_more/informatyk/db2.PNG" alt="Sieci Komputerowe obrazek"/>
-                    </div>
+                    Na tych lekcjach będzie wiele ciekawych i przydatnych projektów.
+                </p>
+                <div class="lightbox__section">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych.png"
+                        alt="Bazy Danych">
+                    <img
+                        src="assets/img/content/informatyk/bazy-danych-2.png"
+                        alt="Bazy Danych">
+                </div>
             </article>
             <article class="page__article page__article--inf pods">
                 <h3><span>Podsumowanie</span></h3>
-                <p>Podsumowując Technik informatyk przygotowuje stanowiska komputerowe z urządzeniami peryferyjnymi do
-                    pracy, diagnozuje je i naprawia.
-                    Przygotowuje lokalne sieci komputerowe i administruje nimi. Tworzy strony internetowe i bazy danych
-                    oraz
-                    administruje nimi.
+                <p>
+                    Zawód technika informatyka jest bardzo wszechstronny. Osoba taka pracując w firmie ma zwykle za zadanie rozwiązywać problemy związane z siecią, systemem komputerowym oraz samymi urządzeniami. Dba on o cały system informatyczny, konserwuje go, a także zajmuje się oprogramowaniem.
+                </p>
+                <p>
+                    Często jednak osoby, które ukończyły informatykę, wybierają konkretną specjalizację. Jako technik informatyk, bez problemu możesz zostać na przykład programistą. Możesz także zajmować się administrowaniem bazą danych, możesz instalować sieci komputerowe lub zarządzać konkretnym systemem.
                 </p>
             </article>
         </div>
@@ -164,10 +184,10 @@
     <div class="page">
         <div class="page__container">
             <h2 class="page__title">Technik<br>teleinformatyk</h2>
-            <p class="page__subtitle">to jest kierunek w naszej szkole</p>
-            <button type="button" class="page__button" onclick="readMoreFunction()">
-                czytaj więcej
-            </button>
+            <p class="page__subtitle">
+                sieci teleinformatyczne, telewizja
+            </p>
+            <button type="button" class="page__button"></button>
         </div>
         <aside class="page__navline-area">
             <div class="page__navline page__navline--tele">
@@ -230,13 +250,10 @@
     <div class="page">
         <div class="page__container">
             <h2 class="page__title">Technik<br>elektronik</h2>
-            <p class="page__subtitle">Na tym kierunku nauczysz się montażu i instalacji układów elektronicznych,
-                podłączenia
-                TV, wykonywanie monitoringu, konfiguracji urządzeń sieci komputerowej, projektowanie systemów
-                automatyki.</p>
-            <button type="button" class="page__button" onclick="readMoreFunction()">
-                czytaj więcej
-            </button>
+            <p class="page__subtitle">
+                układy elektroniczne, pomiary
+            </p>
+            <button type="button" class="page__button"></button>
         </div>
         <aside class="page__navline-area">
             <div class="page__navline page__navline--ele">
@@ -317,12 +334,10 @@
     <div class="page">
         <div class="page__container">
             <h2 class="page__title">Technik<br>programista</h2>
-            <p class="page__subtitle"> Na tym kierunku nauczysz się spawania światłowodów, montowania sieci i urządzeń,
-                zabezpieczenia transmisji, instalowania i konfigurowania systemów operacyjnych, oraz składania
-                komputera.</p>
-            <button type="button" class="page__button" onclick="readMoreFunction()">
-                czytaj więcej
-            </button>
+            <p class="page__subtitle">
+                aplikacje, algorytmy, bazy danych
+            </p>
+            <button type="button" class="page__button"></button>
         </div>
         <aside class="page__navline-area">
             <div class="page__navline page__navline--pro">

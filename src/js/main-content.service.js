@@ -1,5 +1,13 @@
 /* main content service */
 
+pageReadMoreButton.forEach(button => {
+
+    button.innerHTML = 'czytaj więcej';
+    button.addEventListener('click', () => {
+        readMoreFunction();
+    });
+});
+
 const readMoreFunction = () => {
 
     initNavlineService();

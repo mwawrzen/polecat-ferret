@@ -9,7 +9,6 @@ $xl: 1280px
 /* colors */
 
 .light
-    --bg-img: url('../assets/img/tlo-svg.svg')
     --font: #222
     --bg: #eee
     --border: #222
@@ -25,7 +24,6 @@ $xl: 1280px
     --logo-br: 1.5
 
 .dark
-    --bg-img: url('../assets/img/tlo-svg-dark.svg')
     --font: #ddd
     --bg: #222
     --border: #ccc
@@ -536,6 +534,7 @@ body
         justify-content: space-evenly
         flex-flow: row-reverse
         padding: 3rem 10vw
+        overflow: hidden
         @media (max-width: $md)
             flex-flow: column
             padding: 0
@@ -628,7 +627,7 @@ body
 
     &__map
         flex: 2
-
+        height: 100%
         @media (max-width: $md)
             display: flex
             flex-flow: column
@@ -642,6 +641,7 @@ body
             padding: 0
 
         & > iframe
+
             width: 100%
             height: 100%
             border-radius: 20px

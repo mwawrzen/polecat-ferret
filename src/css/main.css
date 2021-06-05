@@ -1,7 +1,6 @@
 /* rwd */
 /* colors */
 .light {
-  --bg-img: url("../assets/img/tlo-svg.svg");
   --font: #222;
   --bg: #eee;
   --border: #222;
@@ -18,7 +17,6 @@
 }
 
 .dark {
-  --bg-img: url("../assets/img/tlo-svg-dark.svg");
   --font: #ddd;
   --bg: #222;
   --border: #ccc;
@@ -642,6 +640,7 @@ body {
   justify-content: space-evenly;
   flex-flow: row-reverse;
   padding: 3rem 10vw;
+  overflow: hidden;
 }
 @media (max-width: 896px) {
   .contact-overlay__content {
@@ -742,6 +741,7 @@ body {
 }
 .contact-overlay__map {
   flex: 2;
+  height: 100%;
 }
 @media (max-width: 896px) {
   .contact-overlay__map {

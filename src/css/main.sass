@@ -72,10 +72,10 @@ body
     background: var(--bg)
 
 .bg-img
-    --val: -8rem
+    --val: -12rem
     width: 32rem
     position: fixed
-    bottom: -18rem
+    bottom: -20rem
     opacity: .8
     @media (max-width: $xl)
         --val: -15rem
@@ -87,26 +87,18 @@ body
     @media (max-width: $sm)
         bottom: -23rem
         --val: -22rem
-    @media (max-width: $xs)
-        width: 30rem
-        bottom: -18rem
-        --val: -30rem
 
     &--left
         transform: rotate(-7deg)
         left: var(--val)
         @media (max-width: $sm)
-            transform: rotate(12deg)
-        @media (max-width: $xs)
-            transform: rotate(15deg)
+            display: none
 
     &--right
         transform: rotate(7deg)
         right: var(--val)
         @media (max-width: $sm)
-            transform: rotate(-12deg)
-        @media (max-width: $xs)
-            transform: rotate(-15deg)
+            display: none
 
     &--top
         top: -2.5rem
@@ -157,7 +149,7 @@ body
         height: 50px
         background: var(--border)
         position: absolute
-        @media (max-width: $xs)
+        @media (max-width: $md)
             height: 30px
 
     &::after
@@ -451,7 +443,6 @@ body
         & > p
             font-size: 20px
             line-height: 1.4
-            // text-indent: 4rem
             margin: 2rem
             text-align: center
             @media (max-width: $md)

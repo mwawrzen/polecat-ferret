@@ -93,10 +93,10 @@ body {
 }
 
 .bg-img {
-  --val: -8rem;
+  --val: -12rem;
   width: 32rem;
   position: fixed;
-  bottom: -18rem;
+  bottom: -20rem;
   opacity: 0.8;
 }
 @media (max-width: 1280px) {
@@ -121,13 +121,6 @@ body {
     --val: -22rem;
   }
 }
-@media (max-width: 512px) {
-  .bg-img {
-    width: 30rem;
-    bottom: -18rem;
-    --val: -30rem;
-  }
-}
 .bg-img--left {
   -webkit-transform: rotate(-7deg);
           transform: rotate(-7deg);
@@ -135,14 +128,7 @@ body {
 }
 @media (max-width: 768px) {
   .bg-img--left {
-    -webkit-transform: rotate(12deg);
-            transform: rotate(12deg);
-  }
-}
-@media (max-width: 512px) {
-  .bg-img--left {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    display: none;
   }
 }
 .bg-img--right {
@@ -152,14 +138,7 @@ body {
 }
 @media (max-width: 768px) {
   .bg-img--right {
-    -webkit-transform: rotate(-12deg);
-            transform: rotate(-12deg);
-  }
-}
-@media (max-width: 512px) {
-  .bg-img--right {
-    -webkit-transform: rotate(-15deg);
-            transform: rotate(-15deg);
+    display: none;
   }
 }
 .bg-img--top {
@@ -222,7 +201,7 @@ body {
   background: var(--border);
   position: absolute;
 }
-@media (max-width: 512px) {
+@media (max-width: 896px) {
   .close-button::after, .close-button::before {
     height: 30px;
   }

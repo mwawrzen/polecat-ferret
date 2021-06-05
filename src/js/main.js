@@ -3,6 +3,7 @@
 let c = 0; // current page number
 const pagesNumber = 3; // pages are numbered from 0
 
+isReadMore = false;
 horizontal = true; // scroll direction
 isContactOverlay = false;
 

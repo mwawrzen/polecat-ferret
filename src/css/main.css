@@ -5,7 +5,7 @@
   --bg: #eee;
   --border: #111;
   --contact-bg: rgba(20, 20, 20, .98);
-  --contact-map-bg: #eee;
+  --contact-map-bg: #111;
   --contact-font: #eee;
   --contact-button: #111;
   --contact-border: #eee;
@@ -18,13 +18,13 @@
 
 .dark {
   --font: #ddd;
-  --bg: #111;
+  --bg: #222;
   --border: #ccc;
   --contact-bg: rgba(20, 20, 20, .98);
   --contact-map-bg: #111;
   --contact-font: #eee;
   --contact-button: #eee;
-  --contact-border: #111;
+  --contact-border: #222;
   --inf: #7fcae6;
   --tel: #784c8b;
   --ele: #428f48;

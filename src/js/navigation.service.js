@@ -3,7 +3,7 @@
 gsap.to(document.body, { duration: .3, top: 0, left: 0 });
 
 const navTo = currPage => {
-
+    if (!horizontal) return
     gsap.to(document.body, {
         duration: .8,
         top: 0,

@@ -7,6 +7,7 @@ horizontal = true; // scroll direction
 isContactOverlay = false;
 
 const themeButton = document.querySelector('.theme-button');
+const backgroundImages = document.querySelectorAll('.bg-img');
 
 const navMenu = document.querySelector('.nav__menu');
 const navButtons = document.querySelectorAll('.nav__link');

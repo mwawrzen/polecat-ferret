@@ -2,19 +2,19 @@
 /* colors */
 .light {
   --bg-img: url("../assets/img/tlo-svg.svg");
-  --font: #111;
+  --font: #222;
   --bg: #eee;
-  --border: #111;
+  --border: #222;
   --contact-bg: rgba(20, 20, 20, .98);
   --contact-map-bg: #111;
   --contact-font: #eee;
-  --contact-button: #111;
+  --contact-button: #222;
   --contact-border: #eee;
   --inf: #3ba9d1;
   --tel: #4f2961;
   --ele: #308d38;
   --pro: #112e63;
-  --logo-br: 1;
+  --logo-br: 1.5;
 }
 
 .dark {
@@ -31,7 +31,7 @@
   --tel: #784c8b;
   --ele: #428f48;
   --pro: #395280;
-  --logo-br: 7;
+  --logo-br: 6.5;
 }
 
 /* animations */
@@ -93,10 +93,11 @@ body {
 }
 
 .bg-img {
-  --val: -10rem;
-  width: 30rem;
+  --val: -8rem;
+  width: 32rem;
   position: fixed;
-  bottom: -13rem;
+  bottom: -18rem;
+  opacity: 0.8;
 }
 @media (max-width: 1280px) {
   .bg-img {
@@ -104,17 +105,17 @@ body {
   }
 }
 .bg-img--left {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
   left: var(--val);
 }
 .bg-img--right {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
   right: var(--val);
 }
 .bg-img--top {
-  top: -2rem;
+  top: -2.5rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -135,7 +136,7 @@ body {
   letter-spacing: 1px;
   font-weight: 700;
 }
-@media (max-height: 400px) {
+@media (max-height: 480px) {
   .error {
     display: grid;
   }
@@ -241,7 +242,7 @@ body {
 .nav {
   position: fixed;
   z-index: 100;
-  bottom: 80px;
+  bottom: 8vh;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -283,6 +284,7 @@ body {
   text-align: center;
 }
 .page__title {
+  text-shadow: 1.7px 1.7px 1.7px #ccc;
   font-size: 80px;
   font-weight: 700;
 }
@@ -391,8 +393,8 @@ body {
   border: 4px solid var(--border);
   border-radius: 50%;
   background: var(--bg);
-  -webkit-transform: translateX(-47%);
-          transform: translateX(-47%);
+  -webkit-transform: translateX(-44%);
+          transform: translateX(-44%);
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -415,9 +417,9 @@ body {
   position: absolute;
   text-align: right;
   width: 100px;
-  font-family: "Open Sans Condensed", open-sans, serif;
+  font-family: "Open Sans Condensed", open-sans, sans-serif;
   font-size: 18px;
-  top: 0;
+  top: 5px;
   left: 0;
   -webkit-transform: translate(-125%, -30%);
           transform: translate(-125%, -30%);
@@ -493,7 +495,7 @@ body {
   font-size: 30px;
   text-align: center;
   margin: 1rem;
-  padding: 2rem 0;
+  padding-top: 2rem;
   font-variant: small-caps;
   line-height: 0.1em;
   overflow: visible;
@@ -638,6 +640,12 @@ body {
     text-align: center;
   }
 }
+@media (max-height: 540px) {
+  .contact-overlay__title {
+    font-size: 40px;
+    margin-top: 2rem;
+  }
+}
 .contact-overlay__subtitle {
   font-size: 20px;
   border-bottom: 2px solid var(--contact-border);
@@ -651,6 +659,11 @@ body {
     margin: 0 2rem;
     font-size: 16px;
     text-align: center;
+  }
+}
+@media (max-height: 540px) {
+  .contact-overlay__subtitle {
+    font-size: 16px;
   }
 }
 .contact-overlay__content {
@@ -671,6 +684,10 @@ body {
 }
 @media (max-width: 896px) {
   .contact-overlay__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     padding: 0;
   }
 }
@@ -754,8 +771,9 @@ body {
   color: var(--color);
 }
 .contact-overlay__map-button {
-  width: 100vw;
   position: fixed;
+  bottom: -80px;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,7 +787,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  bottom: -80px;
   cursor: pointer;
 }
 .contact-overlay__map-button > span {
@@ -863,7 +880,7 @@ body {
 }
 .contact-overlay__map > span::before, .contact-overlay__map > span::after {
   position: absolute;
-  bottom: 20px;
+  bottom: 3vh;
   left: 50%;
   content: "";
   display: block;

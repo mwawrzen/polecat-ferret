@@ -10,19 +10,19 @@ $xl: 1280px
 
 .light
     --bg-img: url('../assets/img/tlo-svg.svg')
-    --font: #111
+    --font: #222
     --bg: #eee
-    --border: #111
+    --border: #222
     --contact-bg: rgba(20, 20, 20, .98)
     --contact-map-bg: #111
     --contact-font: #eee
-    --contact-button: #111
+    --contact-button: #222
     --contact-border: #eee
     --inf: #3ba9d1
     --tel: #4f2961
     --ele: #308d38
     --pro: #112e63
-    --logo-br: 1
+    --logo-br: 1.5
 
 .dark
     --bg-img: url('../assets/img/tlo-svg-dark.svg')
@@ -38,7 +38,7 @@ $xl: 1280px
     --tel: #784c8b
     --ele: #428f48
     --pro: #395280
-    --logo-br: 7
+    --logo-br: 6.5
 
 /* animations */
 
@@ -70,32 +70,26 @@ body
     position: fixed
     color: var(--font)
     background: var(--bg)
-    // background-image: var(--bg-img)
-    // background-repeat: no-repeat
-    // background-size: cover
-    // background-attachment: fixed
-    // background-position: right 20%
-    // @media (max-width: $lg)
-    //     background-image: none
 
 .bg-img
-    --val: -10rem
-    width: 30rem
+    --val: -8rem
+    width: 32rem
     position: fixed
-    bottom: -13rem
+    bottom: -18rem
+    opacity: .8
     @media (max-width: $xl)
         --val: -15rem
 
     &--left
-        transform: rotate(10deg)
+        transform: rotate(-7deg)
         left: var(--val)
 
     &--right
-        transform: rotate(-10deg)
+        transform: rotate(7deg)
         right: var(--val)
 
     &--top
-        top: -2rem
+        top: -2.5rem
         left: 50%
         transform: translateX(-50%)
 
@@ -113,7 +107,7 @@ body
     text-transform: uppercase
     letter-spacing: 1px
     font-weight: 700
-    @media (max-height: 400px)
+    @media (max-height: 480px)
         display: grid
 
 .close-button
@@ -198,7 +192,7 @@ body
 .nav
     position: fixed
     z-index: 100
-    bottom: 80px
+    bottom: 8vh
     left: 50%
     transform: translateX(-50%)
     width: 10%
@@ -233,6 +227,7 @@ body
         text-align: center
 
     &__title
+        text-shadow: 1.7px 1.7px 1.7px #ccc
         font-size: 80px
         font-weight: 700
         @media (max-width: $sm)
@@ -317,7 +312,7 @@ body
         border: 4px solid var(--border)
         border-radius: 50%
         background: var(--bg)
-        transform: translateX(-47%)
+        transform: translateX(-44%)
         cursor: pointer
         transition: .3s
         overflow: visible
@@ -339,9 +334,9 @@ body
             position: absolute
             text-align: right
             width: 100px
-            font-family: 'Open Sans Condensed', open-sans, serif
+            font-family: 'Open Sans Condensed', open-sans, sans-serif
             font-size: 18px
-            top: 0
+            top: 5px
             left: 0
             transform: translate(-125%, -30%)
             padding: 3px
@@ -395,7 +390,7 @@ body
             font-size: 30px
             text-align: center
             margin: 1rem
-            padding: 2rem 0
+            padding-top: 2rem
             font-variant: small-caps
             line-height: .1em
             overflow: visible
@@ -504,6 +499,9 @@ body
             margin-top: 15vh
             font-size: 40px
             text-align: center
+        @media (max-height: 540px)
+            font-size: 40px
+            margin-top: 2rem
 
     &__subtitle
         font-size: 20px
@@ -516,6 +514,8 @@ body
             margin: 0 2rem
             font-size: 16px
             text-align: center
+        @media (max-height: 540px)
+            font-size: 16px
 
     &__content
         flex: 1
@@ -524,6 +524,7 @@ body
         flex-flow: row-reverse
         padding: 3rem 10vw
         @media (max-width: $md)
+            flex-flow: column
             padding: 0
 
     &__left
@@ -574,13 +575,13 @@ body
                 color: var(--color)
 
     &__map-button
-        width: 100vw
         position: fixed
+        bottom: -80px
+        width: 100vw
         display: flex
         justify-content: center
         align-items: center
         flex-flow: column
-        bottom: -80px
         cursor: pointer
 
         & > span
@@ -653,7 +654,7 @@ body
             &::before,
             &::after
                 position: absolute
-                bottom: 20px
+                bottom: 3vh
                 left: 50%
                 content: ''
                 display: block

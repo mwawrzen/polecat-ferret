@@ -1,6 +1,8 @@
 const lightboxContext = document.querySelector(".lightbox");
 const lightboxImage = document.querySelector(".lightbox__img--img");
 const lightboxCloseButton = document.querySelector(".lightbox__close");
+const lightboxNavPrev = document.querySelector(".lightbox__img__nav--prev");
+const lightboxNavNext = document.querySelector(".lightbox__img__nav--next");
 
 let currentGallery = 0;
 let currentImage = 0;
@@ -11,6 +13,15 @@ function getImage(idGallery, idImage) {
     return imgGalleries[idGallery].querySelectorAll("img")[idImage];
 }
 
+function activateNav() {
+    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "block" : "none"
+    let images = document
+        .querySelectorAll(".lightbox__section")[currentGallery]
+        .querySelectorAll("img");
+    lightboxNavNext.style.display = currentImage + 1 < images.length ? "block" : "none"
+}
+
+
 function openLightbox(value) {
 
     let data = value.split(":");
@@ -19,44 +30,48 @@ function openLightbox(value) {
     currentGallery = Number(idGallery);
     currentImage = Number(idImg);
 
-    anim(lightboxContext, { bottom: 0 }, .4);
-    anim(lightboxCloseButton, { display: 'grid' }, .3);
-    tlAnim(gsap.timeline(), lightboxCloseButton, { opacity: 1 });
-    anim(pageCornerCloseButton, { left: '-70px' }, .2);
+    anim(lightboxContext, {bottom: 0}, .4);
+    anim(lightboxCloseButton, {display: 'grid'}, .3);
+    tlAnim(gsap.timeline(), lightboxCloseButton, {opacity: 1});
+    anim(pageCornerCloseButton, {left: '-70px'}, .2);
 
     lightboxImage.src = getImage(idGallery, idImg).src;
+    activateNav();
+
 }
 
 function prevLightbox() {
 
     if (currentImage - 1 >= 0) {
         lightboxImage.style.opacity = 0;
-        anim(lightboxImage, { opacity: 1 }, .5);
+        anim(lightboxImage, {opacity: 1}, .5);
         lightboxImage.src = getImage(currentGallery, currentImage - 1).src;
         lightboxImage.style.transform = 'translateX(0)';
         currentImage--;
     }
+    activateNav();
 }
 
 function nextLightbox() {
 
     let images = document
-                    .querySelectorAll(".lightbox__section")[currentGallery]
-                    .querySelectorAll("img");
+        .querySelectorAll(".lightbox__section")[currentGallery]
+        .querySelectorAll("img");
     if (currentImage + 1 < images.length) {
         lightboxImage.style.opacity = 0;
-        anim(lightboxImage, { opacity: 1 }, .5);
+        anim(lightboxImage, {opacity: 1}, .5);
         lightboxImage.src = getImage(currentGallery, currentImage + 1).src;
         currentImage++;
     }
+    activateNav();
 }
 
-function closeLightbox(){
+function closeLightbox() {
 
-    anim(lightboxContext, { bottom: '-100vh' }, .3);
-    anim(lightboxCloseButton, { opacity: 0 }, .2);
-    tlAnim(gsap.timeline(), lightboxCloseButton, { display: 'none' });
-    anim(pageCornerCloseButton, { left: '24px' }, .2);
+    anim(lightboxContext, {bottom: '-100vh'}, .3);
+    anim(lightboxCloseButton, {opacity: 0}, .2);
+    tlAnim(gsap.timeline(), lightboxCloseButton, {display: 'none'});
+    anim(pageCornerCloseButton, {left: '24px'}, .2);
 }
 
 function setup() {

@@ -1,6 +1,7 @@
 /* rwd */
 /* colors */
 .light {
+  --bg-img: url("../assets/img/tlo-svg.svg");
   --font: #111;
   --bg: #eee;
   --border: #111;
@@ -17,6 +18,7 @@
 }
 
 .dark {
+  --bg-img: url("../assets/img/tlo-svg-dark.svg");
   --font: #ddd;
   --bg: #222;
   --border: #ccc;
@@ -88,10 +90,55 @@ body {
   position: fixed;
   color: var(--font);
   background: var(--bg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: right bottom;
+}
+
+.bg-img {
+  --val: -10rem;
+  width: 30rem;
+  position: fixed;
+  bottom: -13rem;
+}
+@media (max-width: 1280px) {
+  .bg-img {
+    --val: -15rem;
+  }
+}
+.bg-img--left {
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  left: var(--val);
+}
+.bg-img--right {
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  right: var(--val);
+}
+.bg-img--top {
+  top: -2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #111;
+  display: none;
+  place-items: center;
+  z-index: 1000;
+  color: #eee;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+@media (max-height: 400px) {
+  .error {
+    display: grid;
+  }
 }
 
 .close-button {
@@ -444,8 +491,9 @@ body {
 }
 .page__article > h3 {
   font-size: 30px;
-  margin: 1rem 1rem 1rem 4rem;
-  padding: 2rem 0 0 2rem;
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem 0;
   font-variant: small-caps;
   line-height: 0.1em;
   overflow: visible;
@@ -493,9 +541,8 @@ body {
 .page__article > p {
   font-size: 20px;
   line-height: 1.4;
-  text-indent: 4rem;
   margin: 2rem;
-  text-align: justify;
+  text-align: center;
 }
 @media (max-width: 896px) {
   .page__article > p {
@@ -514,28 +561,6 @@ body {
     text-indent: 1rem;
     font-size: 12px;
   }
-}
-.page__article div {
-  width: 80%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 20px;
-}
-.page__article img {
-  width: 30%;
-  border-radius: 15px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  cursor: pointer;
-}
-.page__article img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .contact-overlay {

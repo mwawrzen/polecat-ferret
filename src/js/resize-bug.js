@@ -23,4 +23,7 @@ window.addEventListener('resize', () => {
         else
             pageHeader.forEach(page => page.style.fontSize = '80px');
     }
+
+    navTo(c);
+
 });

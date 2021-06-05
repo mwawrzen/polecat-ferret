@@ -79,19 +79,42 @@ body
     opacity: .8
     @media (max-width: $xl)
         --val: -15rem
+    @media (max-width: $lg)
+        --val: -18rem
+    @media (max-width: $md)
+        --val: -20rem
+        bottom: -23rem
+    @media (max-width: $sm)
+        bottom: -23rem
+        --val: -22rem
+    @media (max-width: $xs)
+        width: 30rem
+        bottom: -18rem
+        --val: -30rem
 
     &--left
         transform: rotate(-7deg)
         left: var(--val)
+        @media (max-width: $sm)
+            transform: rotate(12deg)
+        @media (max-width: $xs)
+            transform: rotate(15deg)
 
     &--right
         transform: rotate(7deg)
         right: var(--val)
+        @media (max-width: $sm)
+            transform: rotate(-12deg)
+        @media (max-width: $xs)
+            transform: rotate(-15deg)
 
     &--top
         top: -2.5rem
         left: 50%
         transform: translateX(-50%)
+        @media (max-width: $xs)
+            top: -2.6rem
+            width: 23rem
 
 .error
     position: fixed
@@ -227,7 +250,6 @@ body
         text-align: center
 
     &__title
-        text-shadow: 1.7px 1.7px 1.7px #ccc
         font-size: 80px
         font-weight: 700
         @media (max-width: $sm)

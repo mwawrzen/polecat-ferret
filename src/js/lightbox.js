@@ -14,11 +14,11 @@ function getImage(idGallery, idImage) {
 }
 
 function activateNav() {
-    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "block" : "none"
+    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "grid" : "none"
     let images = document
         .querySelectorAll(".lightbox__section")[currentGallery]
         .querySelectorAll("img");
-    lightboxNavNext.style.display = currentImage + 1 < images.length ? "block" : "none"
+    lightboxNavNext.style.display = currentImage + 1 < images.length ? "grid" : "none"
 }
 
 
@@ -92,3 +92,15 @@ function setup() {
 }
 
 setup();
+
+window.addEventListener('touchend', e => {
+
+    const endPosition = e.changedTouches[0].screenX;
+    if (Math.abs(endPosition - position) < 100)
+        return;
+    if (endPosition > position) {
+        prevLightbox();
+    } else if (endPosition < position) {
+        nextLightbox();
+    }
+});

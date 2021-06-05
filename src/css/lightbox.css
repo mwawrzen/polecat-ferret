@@ -80,6 +80,7 @@
   height: 50px;
   background: #eee;
   position: absolute;
+  height: 30px;
 }
 .lightbox__close::after {
   -webkit-transform: rotate(45deg);

@@ -16,6 +16,7 @@ const readMoreFunction = (value) => {
         pageContents[c].scrollTop = 0;
         document.body.style.overflow = 'scroll';
 
+        //videos[c].
         pageDescription[c].style.display = 'none';
         anim(pageContents[c], {top: '20vh'});
         anim(pageContainer[c], {top: '18vh'});
@@ -37,6 +38,10 @@ const readMoreFunction = (value) => {
     } else {
 
         document.body.style.overflow = 'hidden';
+
+        const iframe = videos[c].querySelector('iframe');
+        let iframeSrc = iframe.src;
+        iframe.src = iframeSrc;
 
         pageDescription[c].style.display = 'block';
         anim(pageContents[c], {top: '100vh'});

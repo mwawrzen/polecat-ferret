@@ -605,7 +605,7 @@ body {
   border: 1px solid var(--font);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  border-radius: 10px;
+  border-radius: 13px;
 }
 .page__article p > a:hover {
   opacity: 1;
@@ -616,13 +616,13 @@ body {
   width: 80%;
   min-height: 30vw;
   padding: 8px;
-  background: var(--font);
   display: grid;
+  border-radius: 15px;
   place-items: center;
   margin: 1rem auto;
 }
-.page__video * > iframe {
-  height: 400px;
+.page__video > iframe {
+  border-radius: 15px;
 }
 .page__article-container {
   min-height: 300px;

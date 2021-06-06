@@ -37,6 +37,8 @@ const contactMap = document.querySelector('.contact-overlay__map');
 
 const navlineOptionButtons = document.querySelectorAll('.page__nl-circle');
 
+const videos = document.querySelectorAll('.page__video');
+
 /* rwd breakpoints */
 
 const breakpoints = {

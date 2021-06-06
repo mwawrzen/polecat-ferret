@@ -10,7 +10,7 @@ $xl: 1280px
 
 .light
     --font: #222
-    --bg: #eee
+    --bg: #ededed
     --border: #222
     --contact-bg: rgba(20, 20, 20, .98)
     --contact-map-bg: #111
@@ -438,7 +438,7 @@ body
             border-bottom-color: var(--pro)
             color: var(--pro)
 
-        & > p
+        & p
             font-size: 20px
             line-height: 1.4
             margin: 2rem
@@ -452,6 +452,17 @@ body
             @media (max-width: $xs)
                 text-indent: 1rem
                 font-size: 12px
+
+    &__article-container
+        min-height: 300px
+        padding: 0 4rem
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: center
+        @media (max-width: $lg)
+            min-height: 0
+            display: block
 
 .contact-overlay
     width: 100vw

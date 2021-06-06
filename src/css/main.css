@@ -605,7 +605,7 @@ body {
   border: 1px solid var(--font);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .page__article p > a:hover {
   opacity: 1;
@@ -615,6 +615,8 @@ body {
 .page__video {
   width: 80%;
   min-height: 30vw;
+  padding: 8px;
+  background: var(--font);
   display: grid;
   place-items: center;
   margin: 1rem auto;

@@ -10,7 +10,7 @@ $xl: 1280px
 
 .light
     --font: #222
-    --bg: #eee
+    --bg: #ededed
     --border: #222
     --contact-bg: rgba(20, 20, 20, .98)
     --contact-map-bg: #111
@@ -412,8 +412,8 @@ body
                 font-size: 20px
             @media (max-width: $sm)
                 margin: 1rem
+                padding-bottom: .5rem
                 line-height: 100%
-                border-bottom: none
                 text-align: center
             @media (max-width: $xs)
                 margin: .5rem
@@ -438,20 +438,30 @@ body
             border-bottom-color: var(--pro)
             color: var(--pro)
 
-        & > p
+        & p
             font-size: 20px
-            line-height: 1.4
+            line-height: 1.6
             margin: 2rem
             text-align: center
             @media (max-width: $md)
                 font-size: 18px
                 line-height: 1.2
             @media (max-width: $sm)
-                text-indent: 2rem
                 font-size: 16px
             @media (max-width: $xs)
-                text-indent: 1rem
                 font-size: 12px
+
+    &__article-container
+        min-height: 300px
+        padding: 0 4rem
+        display: flex
+        flex-flow: column
+        align-items: center
+        justify-content: center
+        @media (max-width: $lg)
+            min-height: 0
+            display: block
+            padding: 0
 
 .contact-overlay
     width: 100vw

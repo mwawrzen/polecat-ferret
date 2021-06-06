@@ -15,16 +15,17 @@ function getImage(idGallery, idImage) {
 
 
 function activateNav() {
-    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "block" : "none"
+    lightboxNavPrev.style.display = currentImage - 1 >= 0 ? "grid" : "none"
     let images = document
         .querySelectorAll(".lightbox__section")[currentGallery]
         .querySelectorAll("img");
-    lightboxNavNext.style.display = currentImage + 1 < images.length ? "block" : "none"
+    lightboxNavNext.style.display = currentImage + 1 < images.length ? "grid" : "none"
 }
 
 
 function openLightbox(value) {
 
+    pageCornerCloseButton.style.display = 'none';
     let data = value.split(":");
     let idGallery = data[0];
     let idImg = data[1];
@@ -73,6 +74,7 @@ function closeLightbox() {
     anim(lightboxCloseButton, {opacity: 0}, .2);
     tlAnim(gsap.timeline(), lightboxCloseButton, {display: 'none'});
     anim(pageCornerCloseButton, {left: '24px'}, .2);
+    pageCornerCloseButton.style.display = 'grid';
 }
 
 function setup() {

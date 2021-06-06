@@ -540,8 +540,8 @@ body {
 @media (max-width: 768px) {
   .page__article > h3 {
     margin: 1rem;
+    padding-bottom: 0.5rem;
     line-height: 100%;
-    border-bottom: none;
     text-align: center;
   }
 }
@@ -572,7 +572,7 @@ body {
 }
 .page__article p {
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.6;
   margin: 2rem;
   text-align: center;
 }
@@ -584,13 +584,11 @@ body {
 }
 @media (max-width: 768px) {
   .page__article p {
-    text-indent: 2rem;
     font-size: 16px;
   }
 }
 @media (max-width: 512px) {
   .page__article p {
-    text-indent: 1rem;
     font-size: 12px;
   }
 }
@@ -615,6 +613,7 @@ body {
   .page__article-container {
     min-height: 0;
     display: block;
+    padding: 0;
   }
 }
 

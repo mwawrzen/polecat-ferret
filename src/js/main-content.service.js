@@ -42,9 +42,9 @@ const readMoreFunction = (value) => {
         anim(pageContents[c], {top: '100vh'});
         anim(pageContainer[c], {top: '50%'});
         if (window.innerWidth <= breakpoints.sm)
-            anim(pageHeader[c], {fontSize: '40px'});
+            pageHeader.forEach(header => anim(header, {fontSize: '40px'}));
         else
-            anim(pageHeader[c], {fontSize: '80px'});
+            pageHeader.forEach(header => anim(header, {fontSize: '80px'}));
         anim(pageDescription[c], {opacity: 1});
         anim(pageReadMoreButton[c], {opacity: 1});
         anim(navMenu, {opacity: 1, display: 'flex'});

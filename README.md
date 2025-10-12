@@ -21,3 +21,5 @@ https://mwawrzen.github.io/polecat-ferret/src/
 [@Jaanonim](https://github.com/jaanonim)
 
 [@mwawrzen](https://github.com/mwawrzen)
+
+[@Dudek03](https://github.com/Dudek03)
